@@ -1,0 +1,26 @@
+{
+  "source_archive": "SQE_Assignment2_Student_Starter.zip",
+  "archive_sha256": "77698bebcadcc3b9273355625cbf847cdb8049e0ce3c0a2c6e5738fbf6929246",
+  "files": {
+    "Student_Registration_SRS.docx": {
+      "sha256": "37c55dc8fae03be815bcc816cc72b5da5c79161e3486e297ba11fa26d9108212",
+      "bytes": 39289
+    },
+    "requirements.txt": {
+      "sha256": "98fb0add2e26b32c343cd422c6336854a6cf047bdfd65282ed5b7df84f043e18",
+      "bytes": 28
+    },
+    "REQUIREMENTS.md": {
+      "sha256": "172a7a37f67d315517460afc4ae33291bee9e3a05ede7972cb6261ed1d1665dd",
+      "bytes": 5769
+    },
+    "README.md": {
+      "sha256": "8062164668ea71711a736edd717c2cad8195164c306a69dd5301e7afbe76ddfe",
+      "bytes": 1290
+    },
+    "registration.py": {
+      "sha256": "d6c35d6804dd3bcaed3cc164ab2f163ad8214792bdc410e258ec54cdd1099100",
+      "bytes": 2966
+    }
+  }
+}

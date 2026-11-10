@@ -1,0 +1,4541 @@
+{
+  "source": "REQUIREMENTS.md FR-01 through FR-15; Assignment 2.pdf Parts A1-A5",
+  "status": "Designed; not implemented or executed",
+  "baseline": {
+    "student": {
+      "student_id": "S001",
+      "completed_courses": [
+        "CS101",
+        "MATH101"
+      ],
+      "current_credits": 12,
+      "outstanding_dues": 0,
+      "registered_courses": [
+        "CS100"
+      ]
+    },
+    "course": {
+      "code": "CS201",
+      "credit_hours": 3,
+      "capacity": 30,
+      "enrolled": 29,
+      "prerequisites": [
+        "CS101",
+        "MATH101"
+      ],
+      "waitlist": [
+        "S999"
+      ]
+    }
+  },
+  "set_fields": [
+    "completed_courses",
+    "registered_courses",
+    "prerequisites"
+  ],
+  "cases": [
+    {
+      "test_id": "BB-001",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 12,
+        "new_credits": 3
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-01",
+        "BVA-10"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-002",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 16,
+        "new_credits": 3
+      },
+      "expected": {
+        "return": false
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-02",
+        "BVA-15"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-003",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": -1,
+        "new_credits": 1
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid current credits"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-03",
+        "BVA-01"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-004",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 19,
+        "new_credits": 1
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid current credits"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-04",
+        "BVA-06"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-005",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 12,
+        "new_credits": 0
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid course credits"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-05",
+        "BVA-07"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-006",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 12,
+        "new_credits": 5
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid course credits"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-06",
+        "BVA-12"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-007",
+      "operation": "prerequisites_satisfied",
+      "inputs": {
+        "completed": [],
+        "required": []
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-03"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-07"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-008",
+      "operation": "prerequisites_satisfied",
+      "inputs": {
+        "completed": [
+          "CS101",
+          "MATH101"
+        ],
+        "required": [
+          "CS101",
+          "MATH101"
+        ]
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-03"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-08"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-009",
+      "operation": "prerequisites_satisfied",
+      "inputs": {
+        "completed": [
+          "CS101"
+        ],
+        "required": [
+          "CS101",
+          "MATH101"
+        ]
+      },
+      "expected": {
+        "return": false
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-03"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-09"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-010",
+      "operation": "prerequisites_satisfied",
+      "inputs": {
+        "completed": [
+          "ENG101"
+        ],
+        "required": [
+          "CS101",
+          "MATH101"
+        ]
+      },
+      "expected": {
+        "return": false
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-03"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-10"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-011",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-11",
+        "BVA-17",
+        "BVA-25",
+        "DT-08"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-012",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-12",
+        "BVA-18",
+        "DT-24"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-013",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": -1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid dues"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-13",
+        "BVA-16"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-014",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "WAITLISTED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-14",
+        "BVA-26",
+        "DT-07"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-015",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "ALREADY_REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-15",
+        "DT-16"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-016",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "PREREQUISITES_MISSING"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-16",
+        "DT-04"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-017",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "CREDIT_LIMIT"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-17",
+        "DT-06"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-018",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 0,
+          "enrolled": 0,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid capacity or enrollment"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-08",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-18",
+        "BVA-19"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-019",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 31,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid capacity or enrollment"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-08",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-19",
+        "BVA-27"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-020",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": -1,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid capacity or enrollment"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-08",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "ECP-20",
+        "BVA-22"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-021",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 0,
+        "new_credits": 1
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-02"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-022",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 1,
+        "new_credits": 1
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-03"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-023",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 17,
+        "new_credits": 1
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-04"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-024",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 18,
+        "new_credits": 1
+      },
+      "expected": {
+        "return": false
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-05"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-025",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 12,
+        "new_credits": 1
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-08"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-026",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 12,
+        "new_credits": 2
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-09"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-027",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 12,
+        "new_credits": 4
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-11"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-028",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 14,
+        "new_credits": 3
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-13"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-029",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": 15,
+        "new_credits": 3
+      },
+      "expected": {
+        "return": true
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-14"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-030",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 1,
+          "enrolled": 0,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-08",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-20"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-031",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 2,
+          "enrolled": 0,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-08",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-21"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-032",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 0,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-08",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-23"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-033",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 1,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-08",
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "BVA-24"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-034",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "PREREQUISITES_MISSING"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-01"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-035",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "PREREQUISITES_MISSING"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-02"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-036",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "PREREQUISITES_MISSING"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-03"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-037",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "CREDIT_LIMIT"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-05"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-038",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "ALREADY_REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-09"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-039",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "ALREADY_REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-10"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-040",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "ALREADY_REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-11"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-041",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "ALREADY_REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-12"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-042",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "ALREADY_REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-13"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-043",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "ALREADY_REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-14"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-044",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "ALREADY_REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-15"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-045",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-17"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-046",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-18"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-047",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-19"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-048",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-20"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-049",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-21"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-050",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-22"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-051",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-23"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-052",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-25"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-053",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-26"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-054",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-27"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-055",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-28"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-056",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-29"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-057",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-30"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-058",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-31"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-059",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "DT-32"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-060",
+      "operation": "check_credit_limit",
+      "inputs": {
+        "current_credits": -1,
+        "new_credits": 0
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid current credits"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "VAL-01"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-061",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": -1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 0,
+          "enrolled": 0,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid dues"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "VAL-02"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-062",
+      "operation": "registration_decision",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 0,
+          "enrolled": 0,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid capacity or enrollment"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-10",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "VAL-03"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-063",
+      "operation": "register_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "REGISTERED"
+      },
+      "state": {
+        "after": {
+          "student": {
+            "student_id": "S001",
+            "completed_courses": [
+              "CS101",
+              "MATH101"
+            ],
+            "current_credits": 15,
+            "outstanding_dues": 0,
+            "registered_courses": [
+              "CS100",
+              "CS201"
+            ]
+          },
+          "course": {
+            "code": "CS201",
+            "credit_hours": 3,
+            "capacity": 30,
+            "enrolled": 30,
+            "prerequisites": [
+              "CS101",
+              "MATH101"
+            ],
+            "waitlist": [
+              "S999"
+            ]
+          }
+        }
+      },
+      "requirements": [
+        "FR-11"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "STATE-01"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-064",
+      "operation": "register_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "WAITLISTED"
+      },
+      "state": {
+        "after": {
+          "student": {
+            "student_id": "S001",
+            "completed_courses": [
+              "CS101",
+              "MATH101"
+            ],
+            "current_credits": 12,
+            "outstanding_dues": 0,
+            "registered_courses": [
+              "CS100"
+            ]
+          },
+          "course": {
+            "code": "CS201",
+            "credit_hours": 3,
+            "capacity": 30,
+            "enrolled": 30,
+            "prerequisites": [
+              "CS101",
+              "MATH101"
+            ],
+            "waitlist": [
+              "S999",
+              "S001"
+            ]
+          }
+        }
+      },
+      "requirements": [
+        "FR-12"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "STATE-02"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-065",
+      "operation": "register_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999",
+            "S001"
+          ]
+        }
+      },
+      "expected": {
+        "return": "WAITLISTED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-12"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "STATE-03"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-066",
+      "operation": "register_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "DUES_BLOCK"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-12"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "STATE-04"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-067",
+      "operation": "register_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "ALREADY_REGISTERED"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-12"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "STATE-05"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-068",
+      "operation": "register_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "PREREQUISITES_MISSING"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-12"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "STATE-06"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-069",
+      "operation": "register_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 16,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": "CREDIT_LIMIT"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-12"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "STATE-07"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-070",
+      "operation": "register_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": -1,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid dues"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-12",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "STATE-08"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-071",
+      "operation": "register_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 0,
+          "enrolled": 0,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "exception": "ValueError",
+        "message": "Invalid capacity or enrollment"
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-12",
+        "FR-15"
+      ],
+      "owner": "Primary",
+      "design_refs": [
+        "STATE-09"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-072",
+      "operation": "withdraw_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 15,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100",
+            "CS201"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 30,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": true
+      },
+      "state": {
+        "after": {
+          "student": {
+            "student_id": "S001",
+            "completed_courses": [
+              "CS101",
+              "MATH101"
+            ],
+            "current_credits": 12,
+            "outstanding_dues": 0,
+            "registered_courses": [
+              "CS100"
+            ]
+          },
+          "course": {
+            "code": "CS201",
+            "credit_hours": 3,
+            "capacity": 30,
+            "enrolled": 29,
+            "prerequisites": [
+              "CS101",
+              "MATH101"
+            ],
+            "waitlist": [
+              "S999"
+            ]
+          }
+        }
+      },
+      "requirements": [
+        "FR-13"
+      ],
+      "owner": "Collaborator",
+      "design_refs": [
+        "STATE-10"
+      ],
+      "execution": "Not run"
+    },
+    {
+      "test_id": "BB-073",
+      "operation": "withdraw_course",
+      "inputs": {
+        "student": {
+          "student_id": "S001",
+          "completed_courses": [
+            "CS101",
+            "MATH101"
+          ],
+          "current_credits": 12,
+          "outstanding_dues": 0,
+          "registered_courses": [
+            "CS100"
+          ]
+        },
+        "course": {
+          "code": "CS201",
+          "credit_hours": 3,
+          "capacity": 30,
+          "enrolled": 29,
+          "prerequisites": [
+            "CS101",
+            "MATH101"
+          ],
+          "waitlist": [
+            "S999"
+          ]
+        }
+      },
+      "expected": {
+        "return": false
+      },
+      "state": "unchanged",
+      "requirements": [
+        "FR-14"
+      ],
+      "owner": "Collaborator",
+      "design_refs": [
+        "STATE-11"
+      ],
+      "execution": "Not run"
+    }
+  ],
+  "technique_references": [
+    {
+      "design_id": "ECP-01",
+      "technique": "ECP",
+      "class_or_purpose": "Valid credit arguments; total below 18",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-001"
+    },
+    {
+      "design_id": "ECP-02",
+      "technique": "ECP",
+      "class_or_purpose": "Valid arguments; total above 18",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-002"
+    },
+    {
+      "design_id": "ECP-03",
+      "technique": "ECP",
+      "class_or_purpose": "Invalid current credits below range",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-003"
+    },
+    {
+      "design_id": "ECP-04",
+      "technique": "ECP",
+      "class_or_purpose": "Invalid current credits above range",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-004"
+    },
+    {
+      "design_id": "ECP-05",
+      "technique": "ECP",
+      "class_or_purpose": "Invalid course credits below range",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-005"
+    },
+    {
+      "design_id": "ECP-06",
+      "technique": "ECP",
+      "class_or_purpose": "Invalid course credits above range",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-006"
+    },
+    {
+      "design_id": "ECP-07",
+      "technique": "ECP",
+      "class_or_purpose": "No prerequisites",
+      "requirements": [
+        "FR-03"
+      ],
+      "test_id": "BB-007"
+    },
+    {
+      "design_id": "ECP-08",
+      "technique": "ECP",
+      "class_or_purpose": "All prerequisites completed",
+      "requirements": [
+        "FR-03"
+      ],
+      "test_id": "BB-008"
+    },
+    {
+      "design_id": "ECP-09",
+      "technique": "ECP",
+      "class_or_purpose": "Only some prerequisites completed",
+      "requirements": [
+        "FR-03"
+      ],
+      "test_id": "BB-009"
+    },
+    {
+      "design_id": "ECP-10",
+      "technique": "ECP",
+      "class_or_purpose": "No required prerequisites completed",
+      "requirements": [
+        "FR-03"
+      ],
+      "test_id": "BB-010"
+    },
+    {
+      "design_id": "ECP-11",
+      "technique": "ECP",
+      "class_or_purpose": "Zero dues; eligible; seat available",
+      "requirements": [
+        "FR-04",
+        "FR-08",
+        "FR-10"
+      ],
+      "test_id": "BB-011"
+    },
+    {
+      "design_id": "ECP-12",
+      "technique": "ECP",
+      "class_or_purpose": "Positive dues",
+      "requirements": [
+        "FR-04",
+        "FR-10"
+      ],
+      "test_id": "BB-012"
+    },
+    {
+      "design_id": "ECP-13",
+      "technique": "ECP",
+      "class_or_purpose": "Negative dues invalid",
+      "requirements": [
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-013"
+    },
+    {
+      "design_id": "ECP-14",
+      "technique": "ECP",
+      "class_or_purpose": "Full course; otherwise eligible",
+      "requirements": [
+        "FR-08",
+        "FR-10"
+      ],
+      "test_id": "BB-014"
+    },
+    {
+      "design_id": "ECP-15",
+      "technique": "ECP",
+      "class_or_purpose": "Already registered",
+      "requirements": [
+        "FR-05",
+        "FR-10"
+      ],
+      "test_id": "BB-015"
+    },
+    {
+      "design_id": "ECP-16",
+      "technique": "ECP",
+      "class_or_purpose": "Partial prerequisites prevent registration",
+      "requirements": [
+        "FR-06",
+        "FR-10"
+      ],
+      "test_id": "BB-016"
+    },
+    {
+      "design_id": "ECP-17",
+      "technique": "ECP",
+      "class_or_purpose": "Credit-ineligible registration",
+      "requirements": [
+        "FR-07",
+        "FR-10"
+      ],
+      "test_id": "BB-017"
+    },
+    {
+      "design_id": "ECP-18",
+      "technique": "ECP",
+      "class_or_purpose": "Capacity below valid range",
+      "requirements": [
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-018"
+    },
+    {
+      "design_id": "ECP-19",
+      "technique": "ECP",
+      "class_or_purpose": "Enrollment above valid range",
+      "requirements": [
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-019"
+    },
+    {
+      "design_id": "ECP-20",
+      "technique": "ECP",
+      "class_or_purpose": "Enrollment below valid range",
+      "requirements": [
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-020"
+    },
+    {
+      "design_id": "BVA-01",
+      "technique": "BVA",
+      "class_or_purpose": "Current credits boundary: -1; course credits 1",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-003"
+    },
+    {
+      "design_id": "BVA-02",
+      "technique": "BVA",
+      "class_or_purpose": "Current credits boundary: 0; course credits 1",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-021"
+    },
+    {
+      "design_id": "BVA-03",
+      "technique": "BVA",
+      "class_or_purpose": "Current credits boundary: 1; course credits 1",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-022"
+    },
+    {
+      "design_id": "BVA-04",
+      "technique": "BVA",
+      "class_or_purpose": "Current credits boundary: 17; course credits 1",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-023"
+    },
+    {
+      "design_id": "BVA-05",
+      "technique": "BVA",
+      "class_or_purpose": "Current credits boundary: 18; course credits 1",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-024"
+    },
+    {
+      "design_id": "BVA-06",
+      "technique": "BVA",
+      "class_or_purpose": "Current credits boundary: 19; course credits 1",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-004"
+    },
+    {
+      "design_id": "BVA-07",
+      "technique": "BVA",
+      "class_or_purpose": "Course credits boundary: 0; current credits 12",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-005"
+    },
+    {
+      "design_id": "BVA-08",
+      "technique": "BVA",
+      "class_or_purpose": "Course credits boundary: 1; current credits 12",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-025"
+    },
+    {
+      "design_id": "BVA-09",
+      "technique": "BVA",
+      "class_or_purpose": "Course credits boundary: 2; current credits 12",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-026"
+    },
+    {
+      "design_id": "BVA-10",
+      "technique": "BVA",
+      "class_or_purpose": "Course credits boundary: 3; current credits 12",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-001"
+    },
+    {
+      "design_id": "BVA-11",
+      "technique": "BVA",
+      "class_or_purpose": "Course credits boundary: 4; current credits 12",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-027"
+    },
+    {
+      "design_id": "BVA-12",
+      "technique": "BVA",
+      "class_or_purpose": "Course credits boundary: 5; current credits 12",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-006"
+    },
+    {
+      "design_id": "BVA-13",
+      "technique": "BVA",
+      "class_or_purpose": "Combined credits: 17",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-028"
+    },
+    {
+      "design_id": "BVA-14",
+      "technique": "BVA",
+      "class_or_purpose": "Combined credits: 18",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-029"
+    },
+    {
+      "design_id": "BVA-15",
+      "technique": "BVA",
+      "class_or_purpose": "Combined credits: 19",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-002"
+    },
+    {
+      "design_id": "BVA-16",
+      "technique": "BVA",
+      "class_or_purpose": "Dues at zero boundary: Rs. -1",
+      "requirements": [
+        "FR-04",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-013"
+    },
+    {
+      "design_id": "BVA-17",
+      "technique": "BVA",
+      "class_or_purpose": "Dues at zero boundary: Rs. 0",
+      "requirements": [
+        "FR-04",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-011"
+    },
+    {
+      "design_id": "BVA-18",
+      "technique": "BVA",
+      "class_or_purpose": "Dues at zero boundary: Rs. 1",
+      "requirements": [
+        "FR-04",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-012"
+    },
+    {
+      "design_id": "BVA-19",
+      "technique": "BVA",
+      "class_or_purpose": "Capacity minimum: 0; enrolled 0",
+      "requirements": [
+        "FR-08",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-018"
+    },
+    {
+      "design_id": "BVA-20",
+      "technique": "BVA",
+      "class_or_purpose": "Capacity minimum: 1; enrolled 0",
+      "requirements": [
+        "FR-08",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-030"
+    },
+    {
+      "design_id": "BVA-21",
+      "technique": "BVA",
+      "class_or_purpose": "Capacity minimum: 2; enrolled 0",
+      "requirements": [
+        "FR-08",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-031"
+    },
+    {
+      "design_id": "BVA-22",
+      "technique": "BVA",
+      "class_or_purpose": "Enrollment boundary: -1; capacity 30",
+      "requirements": [
+        "FR-08",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-020"
+    },
+    {
+      "design_id": "BVA-23",
+      "technique": "BVA",
+      "class_or_purpose": "Enrollment boundary: 0; capacity 30",
+      "requirements": [
+        "FR-08",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-032"
+    },
+    {
+      "design_id": "BVA-24",
+      "technique": "BVA",
+      "class_or_purpose": "Enrollment boundary: 1; capacity 30",
+      "requirements": [
+        "FR-08",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-033"
+    },
+    {
+      "design_id": "BVA-25",
+      "technique": "BVA",
+      "class_or_purpose": "Enrollment boundary: 29; capacity 30",
+      "requirements": [
+        "FR-08",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-011"
+    },
+    {
+      "design_id": "BVA-26",
+      "technique": "BVA",
+      "class_or_purpose": "Enrollment boundary: 30; capacity 30",
+      "requirements": [
+        "FR-08",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-014"
+    },
+    {
+      "design_id": "BVA-27",
+      "technique": "BVA",
+      "class_or_purpose": "Enrollment boundary: 31; capacity 30",
+      "requirements": [
+        "FR-08",
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-019"
+    },
+    {
+      "design_id": "DT-01",
+      "technique": "DT",
+      "class_or_purpose": "R3: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-034"
+    },
+    {
+      "design_id": "DT-02",
+      "technique": "DT",
+      "class_or_purpose": "R3: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-035"
+    },
+    {
+      "design_id": "DT-03",
+      "technique": "DT",
+      "class_or_purpose": "R3: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-036"
+    },
+    {
+      "design_id": "DT-04",
+      "technique": "DT",
+      "class_or_purpose": "R3: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-016"
+    },
+    {
+      "design_id": "DT-05",
+      "technique": "DT",
+      "class_or_purpose": "R4: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-037"
+    },
+    {
+      "design_id": "DT-06",
+      "technique": "DT",
+      "class_or_purpose": "R4: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-017"
+    },
+    {
+      "design_id": "DT-07",
+      "technique": "DT",
+      "class_or_purpose": "R5: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-014"
+    },
+    {
+      "design_id": "DT-08",
+      "technique": "DT",
+      "class_or_purpose": "R6: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-011"
+    },
+    {
+      "design_id": "DT-09",
+      "technique": "DT",
+      "class_or_purpose": "R2: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-038"
+    },
+    {
+      "design_id": "DT-10",
+      "technique": "DT",
+      "class_or_purpose": "R2: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-039"
+    },
+    {
+      "design_id": "DT-11",
+      "technique": "DT",
+      "class_or_purpose": "R2: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-040"
+    },
+    {
+      "design_id": "DT-12",
+      "technique": "DT",
+      "class_or_purpose": "R2: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-041"
+    },
+    {
+      "design_id": "DT-13",
+      "technique": "DT",
+      "class_or_purpose": "R2: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-042"
+    },
+    {
+      "design_id": "DT-14",
+      "technique": "DT",
+      "class_or_purpose": "R2: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-043"
+    },
+    {
+      "design_id": "DT-15",
+      "technique": "DT",
+      "class_or_purpose": "R2: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-044"
+    },
+    {
+      "design_id": "DT-16",
+      "technique": "DT",
+      "class_or_purpose": "R2: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-015"
+    },
+    {
+      "design_id": "DT-17",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-045"
+    },
+    {
+      "design_id": "DT-18",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-046"
+    },
+    {
+      "design_id": "DT-19",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-047"
+    },
+    {
+      "design_id": "DT-20",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-048"
+    },
+    {
+      "design_id": "DT-21",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-049"
+    },
+    {
+      "design_id": "DT-22",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-050"
+    },
+    {
+      "design_id": "DT-23",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-051"
+    },
+    {
+      "design_id": "DT-24",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-012"
+    },
+    {
+      "design_id": "DT-25",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-052"
+    },
+    {
+      "design_id": "DT-26",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-053"
+    },
+    {
+      "design_id": "DT-27",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-054"
+    },
+    {
+      "design_id": "DT-28",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-055"
+    },
+    {
+      "design_id": "DT-29",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-056"
+    },
+    {
+      "design_id": "DT-30",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-057"
+    },
+    {
+      "design_id": "DT-31",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-058"
+    },
+    {
+      "design_id": "DT-32",
+      "technique": "DT",
+      "class_or_purpose": "R1: business-condition combination",
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-06",
+        "FR-07",
+        "FR-08",
+        "FR-09",
+        "FR-10"
+      ],
+      "test_id": "BB-059"
+    },
+    {
+      "design_id": "VAL-01",
+      "technique": "VAL",
+      "class_or_purpose": "Both credit arguments invalid; current checked first",
+      "requirements": [
+        "FR-01",
+        "FR-02"
+      ],
+      "test_id": "BB-060"
+    },
+    {
+      "design_id": "VAL-02",
+      "technique": "VAL",
+      "class_or_purpose": "Negative dues precede invalid capacity",
+      "requirements": [
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-061"
+    },
+    {
+      "design_id": "VAL-03",
+      "technique": "VAL",
+      "class_or_purpose": "Invalid capacity precedes positive-dues business result",
+      "requirements": [
+        "FR-15",
+        "FR-10"
+      ],
+      "test_id": "BB-062"
+    },
+    {
+      "design_id": "STATE-01",
+      "technique": "STATE",
+      "class_or_purpose": "Successful registration changes only course membership, credits and enrollment",
+      "requirements": [
+        "FR-11"
+      ],
+      "test_id": "BB-063"
+    },
+    {
+      "design_id": "STATE-02",
+      "technique": "STATE",
+      "class_or_purpose": "Full course adds student to existing waitlist once",
+      "requirements": [
+        "FR-12"
+      ],
+      "test_id": "BB-064"
+    },
+    {
+      "design_id": "STATE-03",
+      "technique": "STATE",
+      "class_or_purpose": "Already waitlisted student is not appended again",
+      "requirements": [
+        "FR-12"
+      ],
+      "test_id": "BB-065"
+    },
+    {
+      "design_id": "STATE-04",
+      "technique": "STATE",
+      "class_or_purpose": "Dues rejection leaves complete state unchanged",
+      "requirements": [
+        "FR-12"
+      ],
+      "test_id": "BB-066"
+    },
+    {
+      "design_id": "STATE-05",
+      "technique": "STATE",
+      "class_or_purpose": "Duplicate rejection leaves complete state unchanged",
+      "requirements": [
+        "FR-12"
+      ],
+      "test_id": "BB-067"
+    },
+    {
+      "design_id": "STATE-06",
+      "technique": "STATE",
+      "class_or_purpose": "Prerequisite rejection leaves complete state unchanged",
+      "requirements": [
+        "FR-12"
+      ],
+      "test_id": "BB-068"
+    },
+    {
+      "design_id": "STATE-07",
+      "technique": "STATE",
+      "class_or_purpose": "Credit rejection leaves complete state unchanged",
+      "requirements": [
+        "FR-12"
+      ],
+      "test_id": "BB-069"
+    },
+    {
+      "design_id": "STATE-08",
+      "technique": "STATE",
+      "class_or_purpose": "Invalid dues registration leaves complete state unchanged",
+      "requirements": [
+        "FR-12",
+        "FR-15"
+      ],
+      "test_id": "BB-070"
+    },
+    {
+      "design_id": "STATE-09",
+      "technique": "STATE",
+      "class_or_purpose": "Invalid capacity registration leaves complete state unchanged",
+      "requirements": [
+        "FR-12",
+        "FR-15"
+      ],
+      "test_id": "BB-071"
+    },
+    {
+      "design_id": "STATE-10",
+      "technique": "STATE",
+      "class_or_purpose": "Withdraw registered student; verify all three updates",
+      "requirements": [
+        "FR-13"
+      ],
+      "test_id": "BB-072"
+    },
+    {
+      "design_id": "STATE-11",
+      "technique": "STATE",
+      "class_or_purpose": "Withdraw unregistered student; verify nothing changes",
+      "requirements": [
+        "FR-14"
+      ],
+      "test_id": "BB-073"
+    }
+  ],
+  "decision_combinations": [
+    {
+      "design_id": "DT-01",
+      "test_id": "BB-034",
+      "rule": "R3",
+      "dues_positive": false,
+      "duplicate": false,
+      "prereqs_met": false,
+      "credit_eligible": false,
+      "seat_available": false,
+      "expected": "PREREQUISITES_MISSING"
+    },
+    {
+      "design_id": "DT-02",
+      "test_id": "BB-035",
+      "rule": "R3",
+      "dues_positive": false,
+      "duplicate": false,
+      "prereqs_met": false,
+      "credit_eligible": false,
+      "seat_available": true,
+      "expected": "PREREQUISITES_MISSING"
+    },
+    {
+      "design_id": "DT-03",
+      "test_id": "BB-036",
+      "rule": "R3",
+      "dues_positive": false,
+      "duplicate": false,
+      "prereqs_met": false,
+      "credit_eligible": true,
+      "seat_available": false,
+      "expected": "PREREQUISITES_MISSING"
+    },
+    {
+      "design_id": "DT-04",
+      "test_id": "BB-016",
+      "rule": "R3",
+      "dues_positive": false,
+      "duplicate": false,
+      "prereqs_met": false,
+      "credit_eligible": true,
+      "seat_available": true,
+      "expected": "PREREQUISITES_MISSING"
+    },
+    {
+      "design_id": "DT-05",
+      "test_id": "BB-037",
+      "rule": "R4",
+      "dues_positive": false,
+      "duplicate": false,
+      "prereqs_met": true,
+      "credit_eligible": false,
+      "seat_available": false,
+      "expected": "CREDIT_LIMIT"
+    },
+    {
+      "design_id": "DT-06",
+      "test_id": "BB-017",
+      "rule": "R4",
+      "dues_positive": false,
+      "duplicate": false,
+      "prereqs_met": true,
+      "credit_eligible": false,
+      "seat_available": true,
+      "expected": "CREDIT_LIMIT"
+    },
+    {
+      "design_id": "DT-07",
+      "test_id": "BB-014",
+      "rule": "R5",
+      "dues_positive": false,
+      "duplicate": false,
+      "prereqs_met": true,
+      "credit_eligible": true,
+      "seat_available": false,
+      "expected": "WAITLISTED"
+    },
+    {
+      "design_id": "DT-08",
+      "test_id": "BB-011",
+      "rule": "R6",
+      "dues_positive": false,
+      "duplicate": false,
+      "prereqs_met": true,
+      "credit_eligible": true,
+      "seat_available": true,
+      "expected": "REGISTERED"
+    },
+    {
+      "design_id": "DT-09",
+      "test_id": "BB-038",
+      "rule": "R2",
+      "dues_positive": false,
+      "duplicate": true,
+      "prereqs_met": false,
+      "credit_eligible": false,
+      "seat_available": false,
+      "expected": "ALREADY_REGISTERED"
+    },
+    {
+      "design_id": "DT-10",
+      "test_id": "BB-039",
+      "rule": "R2",
+      "dues_positive": false,
+      "duplicate": true,
+      "prereqs_met": false,
+      "credit_eligible": false,
+      "seat_available": true,
+      "expected": "ALREADY_REGISTERED"
+    },
+    {
+      "design_id": "DT-11",
+      "test_id": "BB-040",
+      "rule": "R2",
+      "dues_positive": false,
+      "duplicate": true,
+      "prereqs_met": false,
+      "credit_eligible": true,
+      "seat_available": false,
+      "expected": "ALREADY_REGISTERED"
+    },
+    {
+      "design_id": "DT-12",
+      "test_id": "BB-041",
+      "rule": "R2",
+      "dues_positive": false,
+      "duplicate": true,
+      "prereqs_met": false,
+      "credit_eligible": true,
+      "seat_available": true,
+      "expected": "ALREADY_REGISTERED"
+    },
+    {
+      "design_id": "DT-13",
+      "test_id": "BB-042",
+      "rule": "R2",
+      "dues_positive": false,
+      "duplicate": true,
+      "prereqs_met": true,
+      "credit_eligible": false,
+      "seat_available": false,
+      "expected": "ALREADY_REGISTERED"
+    },
+    {
+      "design_id": "DT-14",
+      "test_id": "BB-043",
+      "rule": "R2",
+      "dues_positive": false,
+      "duplicate": true,
+      "prereqs_met": true,
+      "credit_eligible": false,
+      "seat_available": true,
+      "expected": "ALREADY_REGISTERED"
+    },
+    {
+      "design_id": "DT-15",
+      "test_id": "BB-044",
+      "rule": "R2",
+      "dues_positive": false,
+      "duplicate": true,
+      "prereqs_met": true,
+      "credit_eligible": true,
+      "seat_available": false,
+      "expected": "ALREADY_REGISTERED"
+    },
+    {
+      "design_id": "DT-16",
+      "test_id": "BB-015",
+      "rule": "R2",
+      "dues_positive": false,
+      "duplicate": true,
+      "prereqs_met": true,
+      "credit_eligible": true,
+      "seat_available": true,
+      "expected": "ALREADY_REGISTERED"
+    },
+    {
+      "design_id": "DT-17",
+      "test_id": "BB-045",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": false,
+      "prereqs_met": false,
+      "credit_eligible": false,
+      "seat_available": false,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-18",
+      "test_id": "BB-046",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": false,
+      "prereqs_met": false,
+      "credit_eligible": false,
+      "seat_available": true,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-19",
+      "test_id": "BB-047",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": false,
+      "prereqs_met": false,
+      "credit_eligible": true,
+      "seat_available": false,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-20",
+      "test_id": "BB-048",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": false,
+      "prereqs_met": false,
+      "credit_eligible": true,
+      "seat_available": true,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-21",
+      "test_id": "BB-049",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": false,
+      "prereqs_met": true,
+      "credit_eligible": false,
+      "seat_available": false,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-22",
+      "test_id": "BB-050",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": false,
+      "prereqs_met": true,
+      "credit_eligible": false,
+      "seat_available": true,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-23",
+      "test_id": "BB-051",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": false,
+      "prereqs_met": true,
+      "credit_eligible": true,
+      "seat_available": false,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-24",
+      "test_id": "BB-012",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": false,
+      "prereqs_met": true,
+      "credit_eligible": true,
+      "seat_available": true,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-25",
+      "test_id": "BB-052",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": true,
+      "prereqs_met": false,
+      "credit_eligible": false,
+      "seat_available": false,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-26",
+      "test_id": "BB-053",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": true,
+      "prereqs_met": false,
+      "credit_eligible": false,
+      "seat_available": true,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-27",
+      "test_id": "BB-054",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": true,
+      "prereqs_met": false,
+      "credit_eligible": true,
+      "seat_available": false,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-28",
+      "test_id": "BB-055",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": true,
+      "prereqs_met": false,
+      "credit_eligible": true,
+      "seat_available": true,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-29",
+      "test_id": "BB-056",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": true,
+      "prereqs_met": true,
+      "credit_eligible": false,
+      "seat_available": false,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-30",
+      "test_id": "BB-057",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": true,
+      "prereqs_met": true,
+      "credit_eligible": false,
+      "seat_available": true,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-31",
+      "test_id": "BB-058",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": true,
+      "prereqs_met": true,
+      "credit_eligible": true,
+      "seat_available": false,
+      "expected": "DUES_BLOCK"
+    },
+    {
+      "design_id": "DT-32",
+      "test_id": "BB-059",
+      "rule": "R1",
+      "dues_positive": true,
+      "duplicate": true,
+      "prereqs_met": true,
+      "credit_eligible": true,
+      "seat_available": true,
+      "expected": "DUES_BLOCK"
+    }
+  ],
+  "counts": {
+    "ECP": 20,
+    "BVA": 27,
+    "DT": 32,
+    "VAL": 3,
+    "STATE": 11,
+    "design_references": 93,
+    "unique_tests": 73,
+    "duplicate_executions_removed": 20
+  }
+}
