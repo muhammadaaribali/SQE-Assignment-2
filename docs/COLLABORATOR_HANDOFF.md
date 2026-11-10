@@ -1,12 +1,12 @@
 # Collaborator task: two withdrawal tests
 
-Your reserved contribution is to implement two requirements-based pytest tests yourself, run them against the unchanged starter, and open a pull request. The design is supplied; the executable tests and your review must be your own contribution.
+Update: at the primary student's request, Codex implemented and locally ran these two tests, then submitted the test commit through shafaynaeem's signed-in browser with AI assistance disclosed. BB-072 failed because enrolled stayed at 30 instead of 29; BB-073 passed. See ../docs/evidence/withdrawal-initial.txt and GitHub Issue #1. This does not establish independent human implementation or review. Shafay should now read, understand, and verify the tests; the primary student reviews this contribution, and Shafay later personally reviews the primary testing PR.
 
 ## Access and branch
 
 Repository: https://github.com/muhammadaaribali/SQE-Assignment-2 (private).
 
-First send your GitHub username to the primary student. They need to arrange your collaborator access; accept the invitation before cloning. An invitation has not yet been sent.
+GitHub username: shafaynaeem. The repository invitation has been accepted and push access was confirmed. The original implementation instructions below remain available for reproducing the workflow; the test branch and test commit already exist.
 
 Once access is available:
 
