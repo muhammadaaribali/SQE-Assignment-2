@@ -1,0 +1,18 @@
+{
+  "run_url": "https://github.com/muhammadaaribali/SQE-Assignment-2/actions/runs/43036997090",
+  "run_id": 43036997090,
+  "job_id": 130578340739,
+  "artifact_id": 13863770928,
+  "head_commit": "3348f279f7b92ad19e6d5ffc8fd4c6656be54473",
+  "tested_merge_commit": "0ccb8aaccafdecb17227af015448f8f0cbd22214",
+  "tests": 78,
+  "passed": 48,
+  "failed": 30,
+  "errors": 0,
+  "skipped": 0,
+  "statements": "51/53",
+  "branches": "24/26",
+  "conclusion": "failure",
+  "artifact_upload": "success",
+  "note": "Expected genuine original-program failures; matches local run. Subsequent evidence-only commit does not change tested code."
+}

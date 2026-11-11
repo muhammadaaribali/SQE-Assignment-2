@@ -1,0 +1,759 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.10, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.14.10/x64/bin/python
+cachedir: .pytest_cache
+rootdir: /home/runner/work/SQE-Assignment-2/SQE-Assignment-2
+plugins: cov-7.1.0
+collecting ... collected 78 items
+
+tests/test_blackbox.py::test_designed_blackbox[BB-001] PASSED            [  1%]
+tests/test_blackbox.py::test_designed_blackbox[BB-002] PASSED            [  2%]
+tests/test_blackbox.py::test_designed_blackbox[BB-003] PASSED            [  3%]
+tests/test_blackbox.py::test_designed_blackbox[BB-004] PASSED            [  5%]
+tests/test_blackbox.py::test_designed_blackbox[BB-005] PASSED            [  6%]
+tests/test_blackbox.py::test_designed_blackbox[BB-006] PASSED            [  7%]
+tests/test_blackbox.py::test_designed_blackbox[BB-007] PASSED            [  8%]
+tests/test_blackbox.py::test_designed_blackbox[BB-008] PASSED            [ 10%]
+tests/test_blackbox.py::test_designed_blackbox[BB-009] FAILED            [ 11%]
+tests/test_blackbox.py::test_designed_blackbox[BB-010] PASSED            [ 12%]
+tests/test_blackbox.py::test_designed_blackbox[BB-011] PASSED            [ 14%]
+tests/test_blackbox.py::test_designed_blackbox[BB-012] FAILED            [ 15%]
+tests/test_blackbox.py::test_designed_blackbox[BB-013] PASSED            [ 16%]
+tests/test_blackbox.py::test_designed_blackbox[BB-014] FAILED            [ 17%]
+tests/test_blackbox.py::test_designed_blackbox[BB-015] PASSED            [ 19%]
+tests/test_blackbox.py::test_designed_blackbox[BB-016] FAILED            [ 20%]
+tests/test_blackbox.py::test_designed_blackbox[BB-017] PASSED            [ 21%]
+tests/test_blackbox.py::test_designed_blackbox[BB-018] PASSED            [ 23%]
+tests/test_blackbox.py::test_designed_blackbox[BB-019] PASSED            [ 24%]
+tests/test_blackbox.py::test_designed_blackbox[BB-020] PASSED            [ 25%]
+tests/test_blackbox.py::test_designed_blackbox[BB-021] PASSED            [ 26%]
+tests/test_blackbox.py::test_designed_blackbox[BB-022] PASSED            [ 28%]
+tests/test_blackbox.py::test_designed_blackbox[BB-023] FAILED            [ 29%]
+tests/test_blackbox.py::test_designed_blackbox[BB-024] PASSED            [ 30%]
+tests/test_blackbox.py::test_designed_blackbox[BB-025] PASSED            [ 32%]
+tests/test_blackbox.py::test_designed_blackbox[BB-026] PASSED            [ 33%]
+tests/test_blackbox.py::test_designed_blackbox[BB-027] PASSED            [ 34%]
+tests/test_blackbox.py::test_designed_blackbox[BB-028] PASSED            [ 35%]
+tests/test_blackbox.py::test_designed_blackbox[BB-029] FAILED            [ 37%]
+tests/test_blackbox.py::test_designed_blackbox[BB-030] PASSED            [ 38%]
+tests/test_blackbox.py::test_designed_blackbox[BB-031] PASSED            [ 39%]
+tests/test_blackbox.py::test_designed_blackbox[BB-032] PASSED            [ 41%]
+tests/test_blackbox.py::test_designed_blackbox[BB-033] PASSED            [ 42%]
+tests/test_blackbox.py::test_designed_blackbox[BB-034] FAILED            [ 43%]
+tests/test_blackbox.py::test_designed_blackbox[BB-035] FAILED            [ 44%]
+tests/test_blackbox.py::test_designed_blackbox[BB-036] FAILED            [ 46%]
+tests/test_blackbox.py::test_designed_blackbox[BB-037] PASSED            [ 47%]
+tests/test_blackbox.py::test_designed_blackbox[BB-038] PASSED            [ 48%]
+tests/test_blackbox.py::test_designed_blackbox[BB-039] PASSED            [ 50%]
+tests/test_blackbox.py::test_designed_blackbox[BB-040] PASSED            [ 51%]
+tests/test_blackbox.py::test_designed_blackbox[BB-041] PASSED            [ 52%]
+tests/test_blackbox.py::test_designed_blackbox[BB-042] PASSED            [ 53%]
+tests/test_blackbox.py::test_designed_blackbox[BB-043] PASSED            [ 55%]
+tests/test_blackbox.py::test_designed_blackbox[BB-044] PASSED            [ 56%]
+tests/test_blackbox.py::test_designed_blackbox[BB-045] FAILED            [ 57%]
+tests/test_blackbox.py::test_designed_blackbox[BB-046] FAILED            [ 58%]
+tests/test_blackbox.py::test_designed_blackbox[BB-047] FAILED            [ 60%]
+tests/test_blackbox.py::test_designed_blackbox[BB-048] FAILED            [ 61%]
+tests/test_blackbox.py::test_designed_blackbox[BB-049] FAILED            [ 62%]
+tests/test_blackbox.py::test_designed_blackbox[BB-050] FAILED            [ 64%]
+tests/test_blackbox.py::test_designed_blackbox[BB-051] FAILED            [ 65%]
+tests/test_blackbox.py::test_designed_blackbox[BB-052] FAILED            [ 66%]
+tests/test_blackbox.py::test_designed_blackbox[BB-053] FAILED            [ 67%]
+tests/test_blackbox.py::test_designed_blackbox[BB-054] FAILED            [ 69%]
+tests/test_blackbox.py::test_designed_blackbox[BB-055] FAILED            [ 70%]
+tests/test_blackbox.py::test_designed_blackbox[BB-056] FAILED            [ 71%]
+tests/test_blackbox.py::test_designed_blackbox[BB-057] FAILED            [ 73%]
+tests/test_blackbox.py::test_designed_blackbox[BB-058] FAILED            [ 74%]
+tests/test_blackbox.py::test_designed_blackbox[BB-059] FAILED            [ 75%]
+tests/test_blackbox.py::test_designed_blackbox[BB-060] PASSED            [ 76%]
+tests/test_blackbox.py::test_designed_blackbox[BB-061] PASSED            [ 78%]
+tests/test_blackbox.py::test_designed_blackbox[BB-062] PASSED            [ 79%]
+tests/test_blackbox.py::test_designed_blackbox[BB-063] PASSED            [ 80%]
+tests/test_blackbox.py::test_designed_blackbox[BB-064] FAILED            [ 82%]
+tests/test_blackbox.py::test_designed_blackbox[BB-065] FAILED            [ 83%]
+tests/test_blackbox.py::test_designed_blackbox[BB-066] FAILED            [ 84%]
+tests/test_blackbox.py::test_designed_blackbox[BB-067] PASSED            [ 85%]
+tests/test_blackbox.py::test_designed_blackbox[BB-068] FAILED            [ 87%]
+tests/test_blackbox.py::test_designed_blackbox[BB-069] PASSED            [ 88%]
+tests/test_blackbox.py::test_designed_blackbox[BB-070] PASSED            [ 89%]
+tests/test_blackbox.py::test_designed_blackbox[BB-071] PASSED            [ 91%]
+tests/test_blackbox.py::test_bb_072_withdraw_registered_student FAILED   [ 92%]
+tests/test_blackbox.py::test_bb_073_withdraw_unregistered_student PASSED [ 93%]
+tests/test_whitebox.py::test_dues_implementation_boundary[WB-001] PASSED [ 94%]
+tests/test_whitebox.py::test_dues_implementation_boundary[WB-002] FAILED [ 96%]
+tests/test_whitebox.py::test_wb_003_no_prerequisite_overlap PASSED       [ 97%]
+tests/test_whitebox.py::test_credit_helper_error_propagation[WB-004] PASSED [ 98%]
+tests/test_whitebox.py::test_credit_helper_error_propagation[WB-005] PASSED [100%]
+
+=================================== FAILURES ===================================
+________________________ test_designed_blackbox[BB-009] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   assert True == False
+________________________ test_designed_blackbox[BB-012] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED
+________________________ test_designed_blackbox[BB-014] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+E     
+E     - WAITLISTED
+E     + REGISTERED
+________________________ test_designed_blackbox[BB-016] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + REGISTERED
+________________________ test_designed_blackbox[BB-023] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   assert False == True
+________________________ test_designed_blackbox[BB-029] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   assert False == True
+________________________ test_designed_blackbox[BB-034] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + CREDIT_LIMIT
+________________________ test_designed_blackbox[BB-035] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + CREDIT_LIMIT
+________________________ test_designed_blackbox[BB-036] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + REGISTERED
+________________________ test_designed_blackbox[BB-045] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + CREDIT_LIMIT
+________________________ test_designed_blackbox[BB-046] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + CREDIT_LIMIT
+________________________ test_designed_blackbox[BB-047] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED
+________________________ test_designed_blackbox[BB-048] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED
+________________________ test_designed_blackbox[BB-049] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + CREDIT_LIMIT
+________________________ test_designed_blackbox[BB-050] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + CREDIT_LIMIT
+________________________ test_designed_blackbox[BB-051] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED
+________________________ test_designed_blackbox[BB-052] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED
+________________________ test_designed_blackbox[BB-053] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED
+________________________ test_designed_blackbox[BB-054] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED
+________________________ test_designed_blackbox[BB-055] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED
+________________________ test_designed_blackbox[BB-056] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED
+________________________ test_designed_blackbox[BB-057] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED
+________________________ test_designed_blackbox[BB-058] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED
+________________________ test_designed_blackbox[BB-059] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED
+________________________ test_designed_blackbox[BB-064] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+E     
+E     - WAITLISTED
+E     + REGISTERED
+
+During handling of the above exception, another exception occurred:
+tests/test_blackbox.py:66: in test_designed_blackbox
+    assert inputs == expected_inputs, f"{case['test_id']}: unexpected state"
+E   AssertionError: BB-064: unexpected state
+E   assert {'student': S...ist=['S999'])} == {'student': S...99', 'S001'])}
+E     
+E     Differing items:
+E     {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}
+E     {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=31, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999', 'S001'])}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E           'student': Student(
+E               student_id='S001',
+E               completed_courses={
+E                                     'CS101',
+E                                     'MATH101',
+E                                 },
+E     -         current_credits=12,
+E     ?                          ^
+E     +         current_credits=15,
+E     ?                          ^
+E               outstanding_dues=0,
+E               registered_courses={
+E                                      'CS100',
+E     +                                'CS201',
+E                                  },
+E           ),
+E           'course': Course(
+E               code='CS201',
+E               credit_hours=3,
+E               capacity=30,
+E     -         enrolled=30,
+E     ?                   ^
+E     +         enrolled=31,
+E     ?                   ^
+E               prerequisites={
+E                                 'CS101',
+E                                 'MATH101',
+E                             },
+E               waitlist=[
+E                            'S999',
+E     -                      'S001',
+E                        ],
+E           ),
+E       }
+________________________ test_designed_blackbox[BB-065] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+E     
+E     - WAITLISTED
+E     + REGISTERED
+
+During handling of the above exception, another exception occurred:
+tests/test_blackbox.py:66: in test_designed_blackbox
+    assert inputs == expected_inputs, f"{case['test_id']}: unexpected state"
+E   AssertionError: BB-065: unexpected state
+E   assert {'student': S...99', 'S001'])} == {'student': S...99', 'S001'])}
+E     
+E     Differing items:
+E     {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}
+E     {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=31, prerequisites={'MATH101', 'CS101'}, waitlist=['S999', 'S001'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999', 'S001'])}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E           'student': Student(
+E               student_id='S001',
+E               completed_courses={
+E                                     'CS101',
+E                                     'MATH101',
+E                                 },
+E     -         current_credits=12,
+E     ?                          ^
+E     +         current_credits=15,
+E     ?                          ^
+E               outstanding_dues=0,
+E               registered_courses={
+E                                      'CS100',
+E     +                                'CS201',
+E                                  },
+E           ),
+E           'course': Course(
+E               code='CS201',
+E               credit_hours=3,
+E               capacity=30,
+E     -         enrolled=30,
+E     ?                   ^
+E     +         enrolled=31,
+E     ?                   ^
+E               prerequisites={
+E                                 'CS101',
+E                                 'MATH101',
+E                             },
+E               waitlist=[
+E                            'S999',
+E                            'S001',
+E                        ],
+E           ),
+E       }
+________________________ test_designed_blackbox[BB-066] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED
+
+During handling of the above exception, another exception occurred:
+tests/test_blackbox.py:66: in test_designed_blackbox
+    assert inputs == expected_inputs, f"{case['test_id']}: unexpected state"
+E   AssertionError: BB-066: unexpected state
+E   assert {'student': S...ist=['S999'])} == {'student': S...ist=['S999'])}
+E     
+E     Differing items:
+E     {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=1, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=1, registered_courses={'CS100'})}
+E     {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=29, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E           'student': Student(
+E               student_id='S001',
+E               completed_courses={
+E                                     'CS101',
+E                                     'MATH101',
+E                                 },
+E     -         current_credits=12,
+E     ?                          ^
+E     +         current_credits=15,
+E     ?                          ^
+E               outstanding_dues=1,
+E               registered_courses={
+E                                      'CS100',
+E     +                                'CS201',
+E                                  },
+E           ),
+E           'course': Course(
+E               code='CS201',
+E               credit_hours=3,
+E               capacity=30,
+E     -         enrolled=29,
+E     ?                  ^^
+E     +         enrolled=30,
+E     ?                  ^^
+E               prerequisites={
+E                                 'CS101',
+E                                 'MATH101',
+E                             },
+E               waitlist=[
+E                            'S999',
+E                        ],
+E           ),
+E       }
+________________________ test_designed_blackbox[BB-068] ________________________
+tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + REGISTERED
+
+During handling of the above exception, another exception occurred:
+tests/test_blackbox.py:66: in test_designed_blackbox
+    assert inputs == expected_inputs, f"{case['test_id']}: unexpected state"
+E   AssertionError: BB-068: unexpected state
+E   assert {'student': S...ist=['S999'])} == {'student': S...ist=['S999'])}
+E     
+E     Differing items:
+E     {'student': Student(student_id='S001', completed_courses={'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}
+E     {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=29, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E           'student': Student(
+E               student_id='S001',
+E               completed_courses={
+E                                     'CS101',
+E                                 },
+E     -         current_credits=12,
+E     ?                          ^
+E     +         current_credits=15,
+E     ?                          ^
+E               outstanding_dues=0,
+E               registered_courses={
+E                                      'CS100',
+E     +                                'CS201',
+E                                  },
+E           ),
+E           'course': Course(
+E               code='CS201',
+E               credit_hours=3,
+E               capacity=30,
+E     -         enrolled=29,
+E     ?                  ^^
+E     +         enrolled=30,
+E     ?                  ^^
+E               prerequisites={
+E                                 'CS101',
+E                                 'MATH101',
+E                             },
+E               waitlist=[
+E                            'S999',
+E                        ],
+E           ),
+E       }
+___________________ test_bb_072_withdraw_registered_student ____________________
+tests/test_blackbox.py:96: in test_bb_072_withdraw_registered_student
+    assert course == expected_course
+E   AssertionError: assert Course(code='...list=['S999']) == Course(code='...list=['S999'])
+E     
+E     Omitting 5 identical items, use -vv to show
+E     Differing attributes:
+E     ['enrolled']
+E     
+E     Drill down into differing attribute enrolled:
+E       enrolled: 30 != 29
+__________________ test_dues_implementation_boundary[WB-002] ___________________
+tests/test_whitebox.py:39: in test_dues_implementation_boundary
+    assert registration_decision(student, course) == expected
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED
+- generated xml file: /home/runner/work/SQE-Assignment-2/SQE-Assignment-2/artifacts/junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.10-final-0 _______________
+
+Name              Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------
+registration.py      53      2     26      2    95%   59, 71
+-------------------------------------------------------------
+TOTAL                53      2     26      2    95%
+Coverage HTML written to dir artifacts/htmlcov
+Coverage XML written to file artifacts/coverage.xml
+Coverage JSON written to file artifacts/coverage.json
+=========================== short test summary info ============================
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-009] - assert True == False
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-012] - AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-014] - AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+  
+  - WAITLISTED
+  + REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-016] - AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'
+  
+  - PREREQUISITES_MISSING
+  + REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-023] - assert False == True
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-029] - assert False == True
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-034] - AssertionError: assert 'CREDIT_LIMIT' == 'PREREQUISITES_MISSING'
+  
+  - PREREQUISITES_MISSING
+  + CREDIT_LIMIT
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-035] - AssertionError: assert 'CREDIT_LIMIT' == 'PREREQUISITES_MISSING'
+  
+  - PREREQUISITES_MISSING
+  + CREDIT_LIMIT
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-036] - AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'
+  
+  - PREREQUISITES_MISSING
+  + REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-045] - AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + CREDIT_LIMIT
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-046] - AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + CREDIT_LIMIT
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-047] - AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-048] - AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-049] - AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + CREDIT_LIMIT
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-050] - AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + CREDIT_LIMIT
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-051] - AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-052] - AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + ALREADY_REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-053] - AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + ALREADY_REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-054] - AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + ALREADY_REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-055] - AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + ALREADY_REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-056] - AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + ALREADY_REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-057] - AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + ALREADY_REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-058] - AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + ALREADY_REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-059] - AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + ALREADY_REGISTERED
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-064] - AssertionError: BB-064: unexpected state
+assert {'student': S...ist=['S999'])} == {'student': S...99', 'S001'])}
+  
+  Differing items:
+  {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}
+  {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=31, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999', 'S001'])}
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    {
+        'student': Student(
+            student_id='S001',
+            completed_courses={
+                                  'CS101',
+                                  'MATH101',
+                              },
+  -         current_credits=12,
+  ?                          ^
+  +         current_credits=15,
+  ?                          ^
+            outstanding_dues=0,
+            registered_courses={
+                                   'CS100',
+  +                                'CS201',
+                               },
+        ),
+        'course': Course(
+            code='CS201',
+            credit_hours=3,
+            capacity=30,
+  -         enrolled=30,
+  ?                   ^
+  +         enrolled=31,
+  ?                   ^
+            prerequisites={
+                              'CS101',
+                              'MATH101',
+                          },
+            waitlist=[
+                         'S999',
+  -                      'S001',
+                     ],
+        ),
+    }
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-065] - AssertionError: BB-065: unexpected state
+assert {'student': S...99', 'S001'])} == {'student': S...99', 'S001'])}
+  
+  Differing items:
+  {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}
+  {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=31, prerequisites={'MATH101', 'CS101'}, waitlist=['S999', 'S001'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999', 'S001'])}
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    {
+        'student': Student(
+            student_id='S001',
+            completed_courses={
+                                  'CS101',
+                                  'MATH101',
+                              },
+  -         current_credits=12,
+  ?                          ^
+  +         current_credits=15,
+  ?                          ^
+            outstanding_dues=0,
+            registered_courses={
+                                   'CS100',
+  +                                'CS201',
+                               },
+        ),
+        'course': Course(
+            code='CS201',
+            credit_hours=3,
+            capacity=30,
+  -         enrolled=30,
+  ?                   ^
+  +         enrolled=31,
+  ?                   ^
+            prerequisites={
+                              'CS101',
+                              'MATH101',
+                          },
+            waitlist=[
+                         'S999',
+                         'S001',
+                     ],
+        ),
+    }
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-066] - AssertionError: BB-066: unexpected state
+assert {'student': S...ist=['S999'])} == {'student': S...ist=['S999'])}
+  
+  Differing items:
+  {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=1, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=1, registered_courses={'CS100'})}
+  {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=29, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])}
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    {
+        'student': Student(
+            student_id='S001',
+            completed_courses={
+                                  'CS101',
+                                  'MATH101',
+                              },
+  -         current_credits=12,
+  ?                          ^
+  +         current_credits=15,
+  ?                          ^
+            outstanding_dues=1,
+            registered_courses={
+                                   'CS100',
+  +                                'CS201',
+                               },
+        ),
+        'course': Course(
+            code='CS201',
+            credit_hours=3,
+            capacity=30,
+  -         enrolled=29,
+  ?                  ^^
+  +         enrolled=30,
+  ?                  ^^
+            prerequisites={
+                              'CS101',
+                              'MATH101',
+                          },
+            waitlist=[
+                         'S999',
+                     ],
+        ),
+    }
+FAILED tests/test_blackbox.py::test_designed_blackbox[BB-068] - AssertionError: BB-068: unexpected state
+assert {'student': S...ist=['S999'])} == {'student': S...ist=['S999'])}
+  
+  Differing items:
+  {'student': Student(student_id='S001', completed_courses={'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}
+  {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=29, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])}
+  
+  Full diff: (-: missing in left side, +: extra in left side)
+    {
+        'student': Student(
+            student_id='S001',
+            completed_courses={
+                                  'CS101',
+                              },
+  -         current_credits=12,
+  ?                          ^
+  +         current_credits=15,
+  ?                          ^
+            outstanding_dues=0,
+            registered_courses={
+                                   'CS100',
+  +                                'CS201',
+                               },
+        ),
+        'course': Course(
+            code='CS201',
+            credit_hours=3,
+            capacity=30,
+  -         enrolled=29,
+  ?                  ^^
+  +         enrolled=30,
+  ?                  ^^
+            prerequisites={
+                              'CS101',
+                              'MATH101',
+                          },
+            waitlist=[
+                         'S999',
+                     ],
+        ),
+    }
+FAILED tests/test_blackbox.py::test_bb_072_withdraw_registered_student - AssertionError: assert Course(code='...list=['S999']) == Course(code='...list=['S999'])
+  
+  Omitting 5 identical items, use -vv to show
+  Differing attributes:
+  ['enrolled']
+  
+  Drill down into differing attribute enrolled:
+    enrolled: 30 != 29
+FAILED tests/test_whitebox.py::test_dues_implementation_boundary[WB-002] - AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+  
+  - DUES_BLOCK
+  + REGISTERED
+======================== 30 failed, 48 passed in 0.21s =========================

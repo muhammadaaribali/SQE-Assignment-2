@@ -182,3 +182,7 @@ These are manually derived tables from source semantics and executed case inputs
 ## Review and next stage
 
 PR #2 and PR #7 were merged during Stage 3 after the recorded assisted approvals. This Stage 4 work is a separate whitebox-testing contribution. All AI assistance must remain disclosed; the review history must not be described as independent human execution. Stage 5 will fix defects on a separate branch after this original-source evidence is preserved. Stage 6 will assemble the final PDF report. Do not mark the full assignment complete at this checkpoint.
+
+## GitHub Actions verification
+
+[PR run 43036997090](https://github.com/muhammadaaribali/SQE-Assignment-2/actions/runs/43036997090) tested head `3348f279f7b92ad19e6d5ffc8fd4c6656be54473` through merge commit `0ccb8aaccafdecb17227af015448f8f0cbd22214`, on Python 3.14.10. Its 78 tests produced **48 passed, 30 failed**, zero errors/skips, matching the local result. Coverage also matches: **51/53 statements and 24/26 branches**. The test step correctly failed and the evidence upload succeeded. Copies of the log, JUnit, coverage and dependency records are retained as `docs/evidence/whitebox-ci*` so the evidence survives artifact expiry. The later evidence-only commit does not change the tested source or tests.
