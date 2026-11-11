@@ -2,6 +2,8 @@
 
 ## Current status
 
+Withdrawal contribution update: shafaynaeem has accepted repository access. At the primary student's explicit request, Codex implemented and ran BB-072/BB-073 and submitted the AI-assisted test commit through that account. Local result: 1 failed (FR-13 enrollment not decremented), 1 passed. GitHub Issue #1 records the defect. Full Stage 3 baseline, Actions, fixes, and independent human reviews remain pending. Earlier Stage 2 statements below describe the design checkpoint before this limited contribution; do not use them as the current execution status.
+
 Stages 1 and 2 are complete: local setup, requirements mapping, private GitHub repository setup, and black-box test design. The design contains 20 ECP, 27 BVA, 32 decision combinations, 3 validation-priority and 11 state references, consolidated into 73 unique planned tests. This is an in-progress project, not a final submission. The implementation, requirements and SRS remain unchanged; README now describes project progress. No pytest tests, fixes, execution results, coverage percentages, GitHub Issues, PRs, or Actions runs have been produced yet.
 
 We stop after each part so the student can ask questions before requesting the next part. These are working stages; the assignment's assessed Parts A-D are tracked separately below.

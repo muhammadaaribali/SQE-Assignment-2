@@ -1,0 +1,8 @@
+{
+  "run_time_utc": "2026-11-10T17:33:37.403467+00:00",
+  "source_base_commit": "e07988d50f075ddabd5946f5f78bf104d9bf8e4d",
+  "command": "python -m pytest tests/test_blackbox.py -k \"bb_072 or bb_073\" -v --tb=short --color=no -p no:cacheprovider",
+  "exit_code": 1,
+  "source_sha256": "d6c35d6804dd3bcaed3cc164ab2f163ad8214792bdc410e258ec54cdd1099100",
+  "test_sha256": "94466012327dc9ad30ca2666f53dffce0e11dd5863869514b2e33e7681e06345"
+}
