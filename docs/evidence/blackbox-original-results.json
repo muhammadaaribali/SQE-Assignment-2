@@ -1,0 +1,367 @@
+[
+  {
+    "test_id": "BB-001",
+    "pytest_name": "test_designed_blackbox[BB-001]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-002",
+    "pytest_name": "test_designed_blackbox[BB-002]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-003",
+    "pytest_name": "test_designed_blackbox[BB-003]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-004",
+    "pytest_name": "test_designed_blackbox[BB-004]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-005",
+    "pytest_name": "test_designed_blackbox[BB-005]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-006",
+    "pytest_name": "test_designed_blackbox[BB-006]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-007",
+    "pytest_name": "test_designed_blackbox[BB-007]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-008",
+    "pytest_name": "test_designed_blackbox[BB-008]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-009",
+    "pytest_name": "test_designed_blackbox[BB-009]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-010",
+    "pytest_name": "test_designed_blackbox[BB-010]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-011",
+    "pytest_name": "test_designed_blackbox[BB-011]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-012",
+    "pytest_name": "test_designed_blackbox[BB-012]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-013",
+    "pytest_name": "test_designed_blackbox[BB-013]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-014",
+    "pytest_name": "test_designed_blackbox[BB-014]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-015",
+    "pytest_name": "test_designed_blackbox[BB-015]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-016",
+    "pytest_name": "test_designed_blackbox[BB-016]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-017",
+    "pytest_name": "test_designed_blackbox[BB-017]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-018",
+    "pytest_name": "test_designed_blackbox[BB-018]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-019",
+    "pytest_name": "test_designed_blackbox[BB-019]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-020",
+    "pytest_name": "test_designed_blackbox[BB-020]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-021",
+    "pytest_name": "test_designed_blackbox[BB-021]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-022",
+    "pytest_name": "test_designed_blackbox[BB-022]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-023",
+    "pytest_name": "test_designed_blackbox[BB-023]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-024",
+    "pytest_name": "test_designed_blackbox[BB-024]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-025",
+    "pytest_name": "test_designed_blackbox[BB-025]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-026",
+    "pytest_name": "test_designed_blackbox[BB-026]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-027",
+    "pytest_name": "test_designed_blackbox[BB-027]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-028",
+    "pytest_name": "test_designed_blackbox[BB-028]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-029",
+    "pytest_name": "test_designed_blackbox[BB-029]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-030",
+    "pytest_name": "test_designed_blackbox[BB-030]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-031",
+    "pytest_name": "test_designed_blackbox[BB-031]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-032",
+    "pytest_name": "test_designed_blackbox[BB-032]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-033",
+    "pytest_name": "test_designed_blackbox[BB-033]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-034",
+    "pytest_name": "test_designed_blackbox[BB-034]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-035",
+    "pytest_name": "test_designed_blackbox[BB-035]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-036",
+    "pytest_name": "test_designed_blackbox[BB-036]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-037",
+    "pytest_name": "test_designed_blackbox[BB-037]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-038",
+    "pytest_name": "test_designed_blackbox[BB-038]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-039",
+    "pytest_name": "test_designed_blackbox[BB-039]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-040",
+    "pytest_name": "test_designed_blackbox[BB-040]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-041",
+    "pytest_name": "test_designed_blackbox[BB-041]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-042",
+    "pytest_name": "test_designed_blackbox[BB-042]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-043",
+    "pytest_name": "test_designed_blackbox[BB-043]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-044",
+    "pytest_name": "test_designed_blackbox[BB-044]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-045",
+    "pytest_name": "test_designed_blackbox[BB-045]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-046",
+    "pytest_name": "test_designed_blackbox[BB-046]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-047",
+    "pytest_name": "test_designed_blackbox[BB-047]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-048",
+    "pytest_name": "test_designed_blackbox[BB-048]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-049",
+    "pytest_name": "test_designed_blackbox[BB-049]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-050",
+    "pytest_name": "test_designed_blackbox[BB-050]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-051",
+    "pytest_name": "test_designed_blackbox[BB-051]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-052",
+    "pytest_name": "test_designed_blackbox[BB-052]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-053",
+    "pytest_name": "test_designed_blackbox[BB-053]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-054",
+    "pytest_name": "test_designed_blackbox[BB-054]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-055",
+    "pytest_name": "test_designed_blackbox[BB-055]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-056",
+    "pytest_name": "test_designed_blackbox[BB-056]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-057",
+    "pytest_name": "test_designed_blackbox[BB-057]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-058",
+    "pytest_name": "test_designed_blackbox[BB-058]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-059",
+    "pytest_name": "test_designed_blackbox[BB-059]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-060",
+    "pytest_name": "test_designed_blackbox[BB-060]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-061",
+    "pytest_name": "test_designed_blackbox[BB-061]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-062",
+    "pytest_name": "test_designed_blackbox[BB-062]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-063",
+    "pytest_name": "test_designed_blackbox[BB-063]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-064",
+    "pytest_name": "test_designed_blackbox[BB-064]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-065",
+    "pytest_name": "test_designed_blackbox[BB-065]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-066",
+    "pytest_name": "test_designed_blackbox[BB-066]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-067",
+    "pytest_name": "test_designed_blackbox[BB-067]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-068",
+    "pytest_name": "test_designed_blackbox[BB-068]",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-069",
+    "pytest_name": "test_designed_blackbox[BB-069]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-070",
+    "pytest_name": "test_designed_blackbox[BB-070]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-071",
+    "pytest_name": "test_designed_blackbox[BB-071]",
+    "result": "Passed"
+  },
+  {
+    "test_id": "BB-072",
+    "pytest_name": "test_bb_072_withdraw_registered_student",
+    "result": "Failed"
+  },
+  {
+    "test_id": "BB-073",
+    "pytest_name": "test_bb_073_withdraw_unregistered_student",
+    "result": "Passed"
+  }
+]

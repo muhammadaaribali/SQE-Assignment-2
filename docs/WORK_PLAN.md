@@ -2,9 +2,9 @@
 
 ## Current status
 
-Withdrawal contribution update: shafaynaeem has accepted repository access. At the primary student's explicit request, Codex implemented and ran BB-072/BB-073 and submitted the AI-assisted test commit through that account. Local result: 1 failed (FR-13 enrollment not decremented), 1 passed. GitHub Issue #1 records the defect. Full Stage 3 baseline, Actions, fixes, and independent human reviews remain pending. Earlier Stage 2 statements below describe the design checkpoint before this limited contribution; do not use them as the current execution status.
+11 November 2026: Stages 1 and 2 are complete. Stage 3 local execution now covers all 73 tests: 44 passed, 29 failed against the unchanged original source. Five distinct defects are confirmed. Coverage is 92.45% statements and 84.62% branches. Full evidence and current status are in BLACKBOX_EXECUTION.md.
 
-Stages 1 and 2 are complete: local setup, requirements mapping, private GitHub repository setup, and black-box test design. The design contains 20 ECP, 27 BVA, 32 decision combinations, 3 validation-priority and 11 state references, consolidated into 73 unique planned tests. This is an in-progress project, not a final submission. The implementation, requirements and SRS remain unchanged; README now describes project progress. No pytest tests, fixes, execution results, coverage percentages, GitHub Issues, PRs, or Actions runs have been produced yet.
+The new test runner, local execution evidence and Actions workflow are prepared locally. Publishing them, opening four new defect Issues and the primary PR, verifying Actions, and completing human reviews remain pending. Existing withdrawal PR #2 is open and unmerged; the local suite includes its two tests. No source fixes have been applied.
 
 We stop after each part so the student can ask questions before requesting the next part. These are working stages; the assignment's assessed Parts A-D are tracked separately below.
 
@@ -21,7 +21,7 @@ We stop after each part so the student can ask questions before requesting the n
 
 The primary student (GitHub: muhammadaaribali), with assistant help, owns the principal test design, registration tests, white-box analysis, defect investigation/fixes, automation, spreadsheets, diagram, and report. Student name and roll number are not yet provided.
 
-The collaborator's small, reserved contribution is the withdrawal tests for FR-13 and FR-14. They implement the tests themselves, run them, describe expected/actual behavior, and open their own PR. Do not complete their reserved implementation and then attribute it to them. Their name, roll number, and GitHub username are not yet provided.
+The collaborator's assigned scope is the withdrawal tests FR-13/FR-14. At the primary student's explicit request, Codex implemented and ran these and submitted them through shafaynaeem's browser, with assistance disclosed in PR #2. This is not independent human implementation or review. Both students' full names and roll numbers remain to be supplied.
 
 Both members must review another member's PR and address feedback. A proposed division is not evidence of completed contributions. Record actual PRs, commits, reviews, and feedback responses when they exist; do not invent them. Both members prepare to explain their own work in the viva.
 
@@ -58,6 +58,4 @@ No collaborator action is needed during Stage 1. The assistant does not send mes
 
 ## GitHub status
 
-Private repository: https://github.com/muhammadaaribali/SQE-Assignment-2. Created on 10 November 2026. The original starter is preserved on main at commit 173a9692f61ce65f801e7799948bd52b9c1ae4b8. Design files and updated documentation are on blackbox-testing. The GitHub connector has publishing access. No unrelated repository was modified. Collaborator identity and access remain pending; no invitation has been sent.
-
-Stage 2 handoff is ready in COLLABORATOR_HANDOFF.md. The collaborator implements BB-072/BB-073 on collaborator-withdrawal-tests, branched from blackbox-testing, and opens a PR targeting blackbox-testing. The primary student reviews it. The collaborator later reviews the primary black-box PR targeting main. Pause here for the primary student's questions before Stage 3 execution work.
+Private repository: https://github.com/muhammadaaribali/SQE-Assignment-2. The unchanged starter is on main at 173a9692f61ce65f801e7799948bd52b9c1ae4b8. Design is on blackbox-testing. Collaborator shafaynaeem has accepted access. PR #2 contains the AI-assisted withdrawal contribution; Issue #1 records its defect. New Stage 3 local work is not yet published. GitHub connector is disconnected in the current session; browser read access was verified. Recheck remote heads before publishing.

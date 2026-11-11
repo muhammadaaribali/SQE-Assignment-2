@@ -4,7 +4,7 @@ SE3002 Software Quality Engineering. The supplied Python registration module is 
 
 ## Progress
 
-Stages 1 and 2 are complete. This contribution branch adds only withdrawal tests BB-072 and BB-073: a local run produced **1 failed, 1 passed** against the unchanged starter. The remaining 71 planned black-box tests, full-suite coverage, and GitHub Actions are pending Stage 3. No defects have been corrected. See [withdrawal evidence](docs/evidence/withdrawal-initial.txt) and [the confirmed FR-13 defect](https://github.com/muhammadaaribali/SQE-Assignment-2/issues/1).
+Stages 1 and 2 are complete. Stage 3 local execution is complete: **73 tests, 44 passed, 29 failed** against the unchanged starter. Statement coverage is **92.45%** and branch coverage is **84.62%**. Five distinct defects are confirmed; no fixes have been applied. See [execution results and evidence](docs/BLACKBOX_EXECUTION.md). GitHub publication of the new work, four additional defect Issues, the primary test PR, Actions verification, and human reviews are pending.
 
 Repository: https://github.com/muhammadaaribali/SQE-Assignment-2
 
@@ -27,7 +27,7 @@ Python 3.10 or later is recommended. Install the supplied testing dependencies:
 python -m pip install -r requirements.txt
 ```
 
-Once Stage 3 adds the tests:
+Run the implemented black-box tests:
 
 ```bash
 python -m pytest tests/test_blackbox.py -v
@@ -40,13 +40,13 @@ After Stage 4 adds white-box tests:
 python -m pytest tests/ --cov=registration --cov-branch --cov-report=term-missing
 ```
 
-These are planned commands, not evidence of completed runs. Correct requirements-based tests may initially fail; preserve those failures before fixing the implementation.
+The black-box run is recorded in docs/evidence; the white-box command remains for Stage 4. Correct requirements-based tests currently fail; preserve those failures before fixing the implementation.
 
 ## Collaboration and remaining work
 
 Primary student: `muhammadaaribali`; collaborator: `shafaynaeem`, whose invitation has been accepted. At the primary student's request, Codex implemented and ran the two withdrawal tests and submitted them through shafaynaeem's signed-in browser. This is AI-assisted work, not evidence of Shafay independently writing or reviewing the tests. Both members' human review and understanding remain to be demonstrated. The primary account records the local evidence and defect report.
 
-Next: implement the black-box tests, integrate the collaborator's two tests, configure GitHub Actions, preserve original failures and coverage, and file distinct defect Issues. White-box analysis, fixes, reviewed PRs, final report, and viva preparation follow in later stages. The final submission is not complete.
+Next: publish the local tests, evidence and prepared Actions workflow; complete peer reviews and branch integration; verify CI and file the four new defect Issues. White-box analysis, fixes, reviewed PRs, final report, and viva preparation follow in later stages. The final submission is not complete.
 
 ## Evidence rules
 

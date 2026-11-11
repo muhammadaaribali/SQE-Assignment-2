@@ -1,8 +1,69 @@
-"""Requirements-based withdrawal tests: BB-072/FR-13 and BB-073/FR-14."""
+"""Execute the requirements-based design; retain the two withdrawal tests."""
 
 from copy import deepcopy
+import json
+from pathlib import Path
 
-from registration import Course, Student, withdraw_course
+import pytest
+
+from registration import (
+    Course, Student, check_credit_limit, prerequisites_satisfied,
+    register_course, registration_decision, withdraw_course,
+)
+
+
+DESIGN = json.loads(
+    (Path(__file__).resolve().parents[1] / "docs" / "blackbox_cases.json")
+    .read_text(encoding="utf-8")
+)
+PRIMARY_CASES = [case for case in DESIGN["cases"] if case["owner"] == "Primary"]
+OPERATIONS = {
+    "check_credit_limit": check_credit_limit,
+    "prerequisites_satisfied": prerequisites_satisfied,
+    "registration_decision": registration_decision,
+    "register_course": register_course,
+}
+
+
+def make_objects(data):
+    """Decode design data into fresh objects without sharing mutable fields."""
+    student_data = deepcopy(data["student"])
+    course_data = deepcopy(data["course"])
+    for field in ("completed_courses", "registered_courses"):
+        student_data[field] = set(student_data[field])
+    course_data["prerequisites"] = set(course_data["prerequisites"])
+    return {"student": Student(**student_data), "course": Course(**course_data)}
+
+
+@pytest.mark.parametrize("case", PRIMARY_CASES, ids=lambda case: case["test_id"])
+def test_designed_blackbox(case):
+    """Compare return/exception and complete state with the frozen design."""
+    operation = OPERATIONS[case["operation"]]
+    inputs = deepcopy(case["inputs"])
+    if "student" in inputs:
+        inputs = make_objects(inputs)
+    elif case["operation"] == "prerequisites_satisfied":
+        inputs = {key: set(value) for key, value in inputs.items()}
+
+    expected_inputs = deepcopy(inputs)
+    if isinstance(case["state"], dict):
+        expected_inputs = make_objects(case["state"]["after"])
+
+    expected = case["expected"]
+    try:
+        if "exception" in expected:
+            assert expected["exception"] == "ValueError"
+            with pytest.raises(ValueError) as error:
+                operation(**inputs)
+            assert str(error.value) == expected["message"]
+        else:
+            actual = operation(**inputs)
+            # Do not accept 1/0 in place of a genuine Boolean result.
+            assert type(actual) is type(expected["return"])
+            assert actual == expected["return"]
+    finally:
+        # Also inspect complete state when the return-value assertion fails.
+        assert inputs == expected_inputs, f"{case['test_id']}: unexpected state"
 
 
 def test_bb_072_withdraw_registered_student():
