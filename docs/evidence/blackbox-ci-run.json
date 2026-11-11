@@ -1,0 +1,18 @@
+{
+  "run_url": "https://github.com/muhammadaaribali/SQE-Assignment-2/actions/runs/42997171307",
+  "run_id": 42997171307,
+  "job_id": 130444036693,
+  "head_sha": "9db9d47643e8605f73964d7ac4082b01be3a2fcd",
+  "tested_merge_sha": "9b392471e6dfe5391e3a6aa7cb7f54593a48934a",
+  "python": "Python 3.14.10",
+  "conclusion": "failure",
+  "tests": 73,
+  "passed": 44,
+  "failed": 29,
+  "errors": 0,
+  "skipped": 0,
+  "artifact_id": 13844556354,
+  "artifact_upload": "success",
+  "artifact_expires_at": "2027-02-09T09:40:37Z",
+  "note": "PR workflows test a temporary merge commit; the head SHA identifies the submitted branch."
+}

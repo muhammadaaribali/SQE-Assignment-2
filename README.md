@@ -4,7 +4,7 @@ SE3002 Software Quality Engineering. The supplied Python registration module is 
 
 ## Progress
 
-Stages 1 and 2 are complete. Stage 3 local execution is complete: **73 tests, 44 passed, 29 failed** against the unchanged starter. Statement coverage is **92.45%** and branch coverage is **84.62%**. Five distinct defects are confirmed; no fixes have been applied. See [execution results and evidence](docs/BLACKBOX_EXECUTION.md). GitHub publication of the new work, four additional defect Issues, the primary test PR, Actions verification, and human reviews are pending.
+Stages 1 and 2 are complete. Stage 3 implementation, execution and publication are complete; peer reviews and merges remain pending. All 73 black-box tests ran locally and on GitHub: **44 passed, 29 failed**, with 92.45% statement coverage and 84.62% branch coverage. Five distinct defects are recorded in Issues #1, #3, #4, #5 and #6. The original program remains unchanged. [Primary testing PR #7](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/7) is open for Shafay's review; [withdrawal PR #2](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/2) is open for the primary student's review. Neither review is claimed complete. Both PRs remain unmerged. See [execution evidence](docs/BLACKBOX_EXECUTION.md).
 
 Repository: https://github.com/muhammadaaribali/SQE-Assignment-2
 
@@ -46,7 +46,7 @@ The black-box run is recorded in docs/evidence; the white-box command remains fo
 
 Primary student: `muhammadaaribali`; collaborator: `shafaynaeem`, whose invitation has been accepted. At the primary student's request, Codex implemented and ran the two withdrawal tests and submitted them through shafaynaeem's signed-in browser. This is AI-assisted work, not evidence of Shafay independently writing or reviewing the tests. Both members' human review and understanding remain to be demonstrated. The primary account records the local evidence and defect report.
 
-Next: publish the local tests, evidence and prepared Actions workflow; complete peer reviews and branch integration; verify CI and file the four new defect Issues. White-box analysis, fixes, reviewed PRs, final report, and viva preparation follow in later stages. The final submission is not complete.
+Next: complete and discuss the genuine peer reviews; proceed to Stage 4 white-box analysis only after the user's go-ahead. Fixes, the final report and viva preparation follow later.
 
 ## Evidence rules
 

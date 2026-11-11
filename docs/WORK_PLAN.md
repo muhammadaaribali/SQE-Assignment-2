@@ -2,9 +2,7 @@
 
 ## Current status
 
-11 November 2026: Stages 1 and 2 are complete. Stage 3 local execution now covers all 73 tests: 44 passed, 29 failed against the unchanged original source. Five distinct defects are confirmed. Coverage is 92.45% statements and 84.62% branches. Full evidence and current status are in BLACKBOX_EXECUTION.md.
-
-The new test runner, local execution evidence and Actions workflow are prepared locally. Publishing them, opening four new defect Issues and the primary PR, verifying Actions, and completing human reviews remain pending. Existing withdrawal PR #2 is open and unmerged; the local suite includes its two tests. No source fixes have been applied.
+Stage 3 implementation, execution and publication are complete; peer reviews and merges remain pending. All 73 black-box tests ran locally and on GitHub: **44 passed, 29 failed**, with 92.45% statement coverage and 84.62% branch coverage. Five distinct defects are recorded in Issues #1, #3, #4, #5 and #6. The original program remains unchanged. [Primary testing PR #7](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/7) is open for Shafay's review; [withdrawal PR #2](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/2) is open for the primary student's review. Neither review is claimed complete. Both PRs remain unmerged.
 
 We stop after each part so the student can ask questions before requesting the next part. These are working stages; the assignment's assessed Parts A-D are tracked separately below.
 
@@ -58,4 +56,6 @@ No collaborator action is needed during Stage 1. The assistant does not send mes
 
 ## GitHub status
 
-Private repository: https://github.com/muhammadaaribali/SQE-Assignment-2. The unchanged starter is on main at 173a9692f61ce65f801e7799948bd52b9c1ae4b8. Design is on blackbox-testing. Collaborator shafaynaeem has accepted access. PR #2 contains the AI-assisted withdrawal contribution; Issue #1 records its defect. New Stage 3 local work is not yet published. GitHub connector is disconnected in the current session; browser read access was verified. Recheck remote heads before publishing.
+Stage 3 implementation, execution and publication are complete; peer reviews and merges remain pending. All 73 black-box tests ran locally and on GitHub: **44 passed, 29 failed**, with 92.45% statement coverage and 84.62% branch coverage. Five distinct defects are recorded in Issues #1, #3, #4, #5 and #6. The original program remains unchanged. [Primary testing PR #7](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/7) is open for Shafay's review; [withdrawal PR #2](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/2) is open for the primary student's review. Neither review is claimed complete. Both PRs remain unmerged.
+
+The primary branch is primary-blackbox-execution, based on the collaborator branch to preserve its commits. Main remains the original starter. PR #2 targets blackbox-testing; PR #7 targets main. Review #2 before integrating it, then complete review of #7. The GitHub connector is connected as muhammadaaribali.
