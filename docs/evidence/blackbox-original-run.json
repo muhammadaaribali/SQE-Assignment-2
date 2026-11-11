@@ -1,0 +1,35 @@
+{
+  "timestamp_utc": "2026-11-11T09:35:37.450593+00:00",
+  "command": [
+    "/home/alislinux/Documents/Codex/2026-11-10/you-h/work/pytest-env/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_blackbox.py",
+    "-v",
+    "--tb=short",
+    "--color=no",
+    "-p",
+    "no:cacheprovider",
+    "--cov=registration",
+    "--cov-branch",
+    "--cov-report=term-missing",
+    "--cov-report=json:docs/evidence/blackbox-original-coverage.json",
+    "--cov-report=xml:docs/evidence/blackbox-original-coverage.xml",
+    "--cov-report=html:docs/evidence/blackbox-original-html",
+    "--junitxml=docs/evidence/blackbox-original-junit.xml"
+  ],
+  "exit_code": 1,
+  "environment": "Python 3.14.4",
+  "source_base_commit": "173a9692f61ce65f801e7799948bd52b9c1ae4b8",
+  "execution_scope": "Local combined working copy, includes unmerged PR #2; not a GitHub Actions run",
+  "sha256": {
+    "registration.py": "d6c35d6804dd3bcaed3cc164ab2f163ad8214792bdc410e258ec54cdd1099100",
+    "tests/test_blackbox.py": "eb87522c04539430c41267e54af4cb2d4971d88cc0e308f8a37ce409f279724a",
+    "docs/blackbox_cases.json": "0520cd79c5c5de3f6b098acf7f2809e18e474d70cedd3d47652366e8fb5c6ebb"
+  },
+  "package_versions": {
+    "pytest": "9.2.0",
+    "pytest-cov": "7.1.0",
+    "coverage": "7.17.2"
+  }
+}

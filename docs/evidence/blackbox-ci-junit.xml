@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="29" skipped="0" tests="73" time="0.300" timestamp="2026-11-11T09:40:49.699166+00:00" hostname="runnervm7aw5e"><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-001]" time="0.002" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-002]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-003]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-004]" time="0.000" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-005]" time="0.000" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-006]" time="0.000" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-007]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-008]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-009]" time="0.001"><failure message="assert True == False">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   assert True == False</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-010]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-011]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-012]" time="0.001"><failure message="AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-013]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-014]" time="0.001"><failure message="AssertionError: assert 'REGISTERED' == 'WAITLISTED'&#10;  &#10;  - WAITLISTED&#10;  + REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+E     
+E     - WAITLISTED
+E     + REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-015]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-016]" time="0.001"><failure message="AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'&#10;  &#10;  - PREREQUISITES_MISSING&#10;  + REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-017]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-018]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-019]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-020]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-021]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-022]" time="0.000" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-023]" time="0.001"><failure message="assert False == True">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   assert False == True</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-024]" time="0.000" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-025]" time="0.000" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-026]" time="0.000" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-027]" time="0.000" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-028]" time="0.000" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-029]" time="0.001"><failure message="assert False == True">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   assert False == True</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-030]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-031]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-032]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-033]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-034]" time="0.001"><failure message="AssertionError: assert 'CREDIT_LIMIT' == 'PREREQUISITES_MISSING'&#10;  &#10;  - PREREQUISITES_MISSING&#10;  + CREDIT_LIMIT">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + CREDIT_LIMIT</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-035]" time="0.001"><failure message="AssertionError: assert 'CREDIT_LIMIT' == 'PREREQUISITES_MISSING'&#10;  &#10;  - PREREQUISITES_MISSING&#10;  + CREDIT_LIMIT">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + CREDIT_LIMIT</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-036]" time="0.001"><failure message="AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'&#10;  &#10;  - PREREQUISITES_MISSING&#10;  + REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-037]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-038]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-039]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-040]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-041]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-042]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-043]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-044]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-045]" time="0.001"><failure message="AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + CREDIT_LIMIT">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + CREDIT_LIMIT</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-046]" time="0.001"><failure message="AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + CREDIT_LIMIT">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + CREDIT_LIMIT</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-047]" time="0.001"><failure message="AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-048]" time="0.001"><failure message="AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-049]" time="0.001"><failure message="AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + CREDIT_LIMIT">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + CREDIT_LIMIT</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-050]" time="0.001"><failure message="AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + CREDIT_LIMIT">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'CREDIT_LIMIT' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + CREDIT_LIMIT</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-051]" time="0.001"><failure message="AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-052]" time="0.001"><failure message="AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + ALREADY_REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-053]" time="0.001"><failure message="AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + ALREADY_REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-054]" time="0.001"><failure message="AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + ALREADY_REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-055]" time="0.001"><failure message="AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + ALREADY_REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-056]" time="0.001"><failure message="AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + ALREADY_REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-057]" time="0.001"><failure message="AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + ALREADY_REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-058]" time="0.001"><failure message="AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + ALREADY_REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-059]" time="0.001"><failure message="AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'&#10;  &#10;  - DUES_BLOCK&#10;  + ALREADY_REGISTERED">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'ALREADY_REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + ALREADY_REGISTERED</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-060]" time="0.000" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-061]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-062]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-063]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-064]" time="0.002"><failure message="AssertionError: BB-064: unexpected state&#10;assert {'student': S...ist=['S999'])} == {'student': S...99', 'S001'])}&#10;  &#10;  Differing items:&#10;  {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}&#10;[+38 more lines; full report in element text]">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+E     
+E     - WAITLISTED
+E     + REGISTERED
+
+During handling of the above exception, another exception occurred:
+tests/test_blackbox.py:66: in test_designed_blackbox
+    assert inputs == expected_inputs, f"{case['test_id']}: unexpected state"
+E   AssertionError: BB-064: unexpected state
+E   assert {'student': S...ist=['S999'])} == {'student': S...99', 'S001'])}
+E     
+E     Differing items:
+E     {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}
+E     {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=31, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999', 'S001'])}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E           'student': Student(
+E               student_id='S001',
+E               completed_courses={
+E                                     'CS101',
+E                                     'MATH101',
+E                                 },
+E     -         current_credits=12,
+E     ?                          ^
+E     +         current_credits=15,
+E     ?                          ^
+E               outstanding_dues=0,
+E               registered_courses={
+E                                      'CS100',
+E     +                                'CS201',
+E                                  },
+E           ),
+E           'course': Course(
+E               code='CS201',
+E               credit_hours=3,
+E               capacity=30,
+E     -         enrolled=30,
+E     ?                   ^
+E     +         enrolled=31,
+E     ?                   ^
+E               prerequisites={
+E                                 'CS101',
+E                                 'MATH101',
+E                             },
+E               waitlist=[
+E                            'S999',
+E     -                      'S001',
+E                        ],
+E           ),
+E       }</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-065]" time="0.001"><failure message="AssertionError: BB-065: unexpected state&#10;assert {'student': S...99', 'S001'])} == {'student': S...99', 'S001'])}&#10;  &#10;  Differing items:&#10;  {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}&#10;[+38 more lines; full report in element text]">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'WAITLISTED'
+E     
+E     - WAITLISTED
+E     + REGISTERED
+
+During handling of the above exception, another exception occurred:
+tests/test_blackbox.py:66: in test_designed_blackbox
+    assert inputs == expected_inputs, f"{case['test_id']}: unexpected state"
+E   AssertionError: BB-065: unexpected state
+E   assert {'student': S...99', 'S001'])} == {'student': S...99', 'S001'])}
+E     
+E     Differing items:
+E     {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}
+E     {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=31, prerequisites={'MATH101', 'CS101'}, waitlist=['S999', 'S001'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999', 'S001'])}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E           'student': Student(
+E               student_id='S001',
+E               completed_courses={
+E                                     'CS101',
+E                                     'MATH101',
+E                                 },
+E     -         current_credits=12,
+E     ?                          ^
+E     +         current_credits=15,
+E     ?                          ^
+E               outstanding_dues=0,
+E               registered_courses={
+E                                      'CS100',
+E     +                                'CS201',
+E                                  },
+E           ),
+E           'course': Course(
+E               code='CS201',
+E               credit_hours=3,
+E               capacity=30,
+E     -         enrolled=30,
+E     ?                   ^
+E     +         enrolled=31,
+E     ?                   ^
+E               prerequisites={
+E                                 'CS101',
+E                                 'MATH101',
+E                             },
+E               waitlist=[
+E                            'S999',
+E                            'S001',
+E                        ],
+E           ),
+E       }</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-066]" time="0.001"><failure message="AssertionError: BB-066: unexpected state&#10;assert {'student': S...ist=['S999'])} == {'student': S...ist=['S999'])}&#10;  &#10;  Differing items:&#10;  {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=1, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=1, registered_courses={'CS100'})}&#10;[+37 more lines; full report in element text]">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'DUES_BLOCK'
+E     
+E     - DUES_BLOCK
+E     + REGISTERED
+
+During handling of the above exception, another exception occurred:
+tests/test_blackbox.py:66: in test_designed_blackbox
+    assert inputs == expected_inputs, f"{case['test_id']}: unexpected state"
+E   AssertionError: BB-066: unexpected state
+E   assert {'student': S...ist=['S999'])} == {'student': S...ist=['S999'])}
+E     
+E     Differing items:
+E     {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=15, outstanding_dues=1, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'MATH101', 'CS101'}, current_credits=12, outstanding_dues=1, registered_courses={'CS100'})}
+E     {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=29, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E           'student': Student(
+E               student_id='S001',
+E               completed_courses={
+E                                     'CS101',
+E                                     'MATH101',
+E                                 },
+E     -         current_credits=12,
+E     ?                          ^
+E     +         current_credits=15,
+E     ?                          ^
+E               outstanding_dues=1,
+E               registered_courses={
+E                                      'CS100',
+E     +                                'CS201',
+E                                  },
+E           ),
+E           'course': Course(
+E               code='CS201',
+E               credit_hours=3,
+E               capacity=30,
+E     -         enrolled=29,
+E     ?                  ^^
+E     +         enrolled=30,
+E     ?                  ^^
+E               prerequisites={
+E                                 'CS101',
+E                                 'MATH101',
+E                             },
+E               waitlist=[
+E                            'S999',
+E                        ],
+E           ),
+E       }</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-067]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-068]" time="0.001"><failure message="AssertionError: BB-068: unexpected state&#10;assert {'student': S...ist=['S999'])} == {'student': S...ist=['S999'])}&#10;  &#10;  Differing items:&#10;  {'student': Student(student_id='S001', completed_courses={'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}&#10;[+36 more lines; full report in element text]">tests/test_blackbox.py:63: in test_designed_blackbox
+    assert actual == expected["return"]
+E   AssertionError: assert 'REGISTERED' == 'PREREQUISITES_MISSING'
+E     
+E     - PREREQUISITES_MISSING
+E     + REGISTERED
+
+During handling of the above exception, another exception occurred:
+tests/test_blackbox.py:66: in test_designed_blackbox
+    assert inputs == expected_inputs, f"{case['test_id']}: unexpected state"
+E   AssertionError: BB-068: unexpected state
+E   assert {'student': S...ist=['S999'])} == {'student': S...ist=['S999'])}
+E     
+E     Differing items:
+E     {'student': Student(student_id='S001', completed_courses={'CS101'}, current_credits=15, outstanding_dues=0, registered_courses={'CS100', 'CS201'})} != {'student': Student(student_id='S001', completed_courses={'CS101'}, current_credits=12, outstanding_dues=0, registered_courses={'CS100'})}
+E     {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=30, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])} != {'course': Course(code='CS201', credit_hours=3, capacity=30, enrolled=29, prerequisites={'MATH101', 'CS101'}, waitlist=['S999'])}
+E     
+E     Full diff: (-: missing in left side, +: extra in left side)
+E       {
+E           'student': Student(
+E               student_id='S001',
+E               completed_courses={
+E                                     'CS101',
+E                                 },
+E     -         current_credits=12,
+E     ?                          ^
+E     +         current_credits=15,
+E     ?                          ^
+E               outstanding_dues=0,
+E               registered_courses={
+E                                      'CS100',
+E     +                                'CS201',
+E                                  },
+E           ),
+E           'course': Course(
+E               code='CS201',
+E               credit_hours=3,
+E               capacity=30,
+E     -         enrolled=29,
+E     ?                  ^^
+E     +         enrolled=30,
+E     ?                  ^^
+E               prerequisites={
+E                                 'CS101',
+E                                 'MATH101',
+E                             },
+E               waitlist=[
+E                            'S999',
+E                        ],
+E           ),
+E       }</failure></testcase><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-069]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-070]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_designed_blackbox[BB-071]" time="0.001" /><testcase classname="tests.test_blackbox" name="test_bb_072_withdraw_registered_student" time="0.001"><failure message="AssertionError: assert Course(code='...list=['S999']) == Course(code='...list=['S999'])&#10;  &#10;  Omitting 5 identical items, use -vv to show&#10;  Differing attributes:&#10;  ['enrolled']&#10;  &#10;  Drill down into differing attribute enrolled:&#10;    enrolled: 30 != 29">tests/test_blackbox.py:96: in test_bb_072_withdraw_registered_student
+    assert course == expected_course
+E   AssertionError: assert Course(code='...list=['S999']) == Course(code='...list=['S999'])
+E     
+E     Omitting 5 identical items, use -vv to show
+E     Differing attributes:
+E     ['enrolled']
+E     
+E     Drill down into differing attribute enrolled:
+E       enrolled: 30 != 29</failure></testcase><testcase classname="tests.test_blackbox" name="test_bb_073_withdraw_unregistered_student" time="0.000" /></testsuite></testsuites>
