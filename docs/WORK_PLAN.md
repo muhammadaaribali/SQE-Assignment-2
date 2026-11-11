@@ -2,7 +2,7 @@
 
 ## Current status
 
-Stage 3 implementation, execution and publication are complete; peer reviews and merges remain pending. All 73 black-box tests ran locally and on GitHub: **44 passed, 29 failed**, with 92.45% statement coverage and 84.62% branch coverage. Five distinct defects are recorded in Issues #1, #3, #4, #5 and #6. The original program remains unchanged. [Primary testing PR #7](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/7) is open for Shafay's review; [withdrawal PR #2](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/2) is open for the primary student's review. Neither review is claimed complete. Both PRs remain unmerged.
+Stage 3 PRs #2 and #7 are merged. Stage 4 local work is implemented on the unchanged original source: 5 structural tests, expanded CFG (V=10), 9 feasible basis-path witnesses plus 1 documented infeasible path, manual condition coverage and masking MC/DC. All 78 tests ran: 48 passed, 30 failed. Statements 96.23%; branches 92.31%. White-box analysis and immutable evidence are in WHITEBOX_ANALYSIS.md and docs/evidence/whitebox-original*. The source has not been fixed. Stage 4 publication/review status is recorded in the associated PR.
 
 We stop after each part so the student can ask questions before requesting the next part. These are working stages; the assignment's assessed Parts A-D are tracked separately below.
 
@@ -56,6 +56,6 @@ No collaborator action is needed during Stage 1. The assistant does not send mes
 
 ## GitHub status
 
-Stage 3 implementation, execution and publication are complete; peer reviews and merges remain pending. All 73 black-box tests ran locally and on GitHub: **44 passed, 29 failed**, with 92.45% statement coverage and 84.62% branch coverage. Five distinct defects are recorded in Issues #1, #3, #4, #5 and #6. The original program remains unchanged. [Primary testing PR #7](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/7) is open for Shafay's review; [withdrawal PR #2](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/2) is open for the primary student's review. Neither review is claimed complete. Both PRs remain unmerged.
+Repository: https://github.com/muhammadaaribali/SQE-Assignment-2. PR #2 merged into blackbox-testing at 8e1f65831ebfbe11a9edf435b4af6504d23e64fe, then PR #7 merged into main at 6b29e0cb8d89f4cc47b80c2b5f611d11db4534da, as explicitly requested. Primary review on #2: 5857526324. Shafay-account assisted review/comment on #7: 5859018400; assisted approval: 5859050351. Actual AI involvement is disclosed; do not describe these as independent human executions.
 
-The primary branch is primary-blackbox-execution, based on the collaborator branch to preserve its commits. Main remains the original starter. PR #2 targets blackbox-testing; PR #7 targets main. Review #2 before integrating it, then complete review of #7. The GitHub connector is connected as muhammadaaribali.
+Stage 4 uses whitebox-testing from that main merge, with a separate PR. Existing defect Issues #1, #3, #4, #5 and #6 remain open; the new WB-002 failure belongs to #5. Stop after the Stage 4 checkpoint; source fixes belong to the next authorized stage.
