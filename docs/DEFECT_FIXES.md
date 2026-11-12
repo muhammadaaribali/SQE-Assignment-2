@@ -40,8 +40,12 @@ From the project directory with dependencies installed:
 python -m pytest tests/ -v --tb=short --cov=registration --cov-branch --cov-report=term-missing
 ```
 
-Local run: docs/evidence/fixed-local.txt, fixed-local-junit.xml, fixed-local-coverage.json/.xml and fixed-local-run.json. Metadata records the exact command, source/test hashes, base commit and exit code 0. Original blackbox-original*, whitebox-original* and whitebox-ci* evidence is retained unchanged. GitHub verification will be recorded separately after the fixes PR runs.
+Local run: docs/evidence/fixed-local.txt, fixed-local-junit.xml, fixed-local-coverage.json/.xml and fixed-local-run.json. Metadata records the exact command, source/test hashes, base commit and exit code 0. Original blackbox-original*, whitebox-original* and whitebox-ci* evidence is retained unchanged. GitHub verification is recorded below.
 
 ## Review checkpoint
 
 Prepared with Codex assistance on the primary student's side. No independent human review or execution is claimed. Keep the fixes PR unmerged until the user reviews this stage and authorizes merging. Issues remain open until the fixes are merged. Stage 6 (final PDF report and submission checks) is not started.
+
+## GitHub Actions verification
+
+[PR #9](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/9) contains the fixes and remains unmerged for the user checkpoint. [Run 43268281508](https://github.com/muhammadaaribali/SQE-Assignment-2/actions/runs/43268281508) tests head `83037ee3233f6878556ec984ced54ab599b797af`. Its downloaded evidence confirms **78 passed, zero failures/errors/skips**, **54/54 statements**, **26/26 branches**. It matches the local run. The workflow keeps genuine test exit codes and preserves artifacts. Durable copies are in `docs/evidence/fixed-ci*`; run metadata includes the actual tested merge commit. The later evidence-only commit changes neither source nor tests.
