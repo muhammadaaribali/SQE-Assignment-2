@@ -1,0 +1,28 @@
+{
+  "timestamp_utc": "2026-11-12T17:18:18.154746+00:00",
+  "command": [
+    "/home/alislinux/Documents/Codex/2026-11-10/you-h/work/pytest-env/bin/python",
+    "-m",
+    "pytest",
+    "tests/",
+    "-v",
+    "--tb=short",
+    "--color=no",
+    "--cov=registration",
+    "--cov-branch",
+    "--cov-report=term-missing",
+    "--cov-report=json:docs/evidence/fixed-local-coverage.json",
+    "--cov-report=xml:docs/evidence/fixed-local-coverage.xml",
+    "--cov-report=html:docs/evidence/fixed-local-html",
+    "--junitxml=docs/evidence/fixed-local-junit.xml"
+  ],
+  "exit_code": 0,
+  "base_commit": "e72449f60343dc75f64f5fddc83a4f21fe1d6b2d",
+  "sha256": {
+    "registration.py": "decda3dc9612b96f738426694e35482be4c5de5e9d98ac9a33b8ce47319b9959",
+    "tests/test_blackbox.py": "eb87522c04539430c41267e54af4cb2d4971d88cc0e308f8a37ce409f279724a",
+    "tests/test_whitebox.py": "4ea253c3698327cb2bc83072644f16f8c62c5910feae27f4e325248cdd0da6eb",
+    "docs/blackbox_cases.json": "0520cd79c5c5de3f6b098acf7f2809e18e474d70cedd3d47652366e8fb5c6ebb"
+  },
+  "note": "Only five source corrections; all 78 test cases and their expectations unchanged."
+}

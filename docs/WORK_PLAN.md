@@ -2,7 +2,7 @@
 
 ## Current status
 
-Stage 3 PRs #2 and #7 are merged. Stage 4 local work is implemented on the unchanged original source: 5 structural tests, expanded CFG (V=10), 9 feasible basis-path witnesses plus 1 documented infeasible path, manual condition coverage and masking MC/DC. All 78 tests ran: 48 passed, 30 failed. Statements 96.23%; branches 92.31%. White-box analysis and immutable evidence are in WHITEBOX_ANALYSIS.md and docs/evidence/whitebox-original*. The source has not been fixed. Stage 4 publication/review status is recorded in the associated PR.
+Stages 1–4 are complete; PR #8 merged at e72449f60343dc75f64f5fddc83a4f21fe1d6b2d after Codex-assisted technical review 5878893248, explicitly authorized by the user. Stage 5 on defect-fixes implements five source corrections, with all 78 unchanged tests passing locally (54/54 statements, 26/26 branches). Original-source evidence is preserved. See DEFECT_FIXES.md for review, CI and regression status. Stage 6 has not started.
 
 We stop after each part so the student can ask questions before requesting the next part. These are working stages; the assignment's assessed Parts A-D are tracked separately below.
 
@@ -58,4 +58,4 @@ No collaborator action is needed during Stage 1. The assistant does not send mes
 
 Repository: https://github.com/muhammadaaribali/SQE-Assignment-2. PR #2 merged into blackbox-testing at 8e1f65831ebfbe11a9edf435b4af6504d23e64fe, then PR #7 merged into main at 6b29e0cb8d89f4cc47b80c2b5f611d11db4534da, as explicitly requested. Primary review on #2: 5857526324. Shafay-account assisted review/comment on #7: 5859018400; assisted approval: 5859050351. Actual AI involvement is disclosed; do not describe these as independent human executions.
 
-Stage 4 uses whitebox-testing from that main merge, with a separate PR. Existing defect Issues #1, #3, #4, #5 and #6 remain open; the new WB-002 failure belongs to #5. Stop after the Stage 4 checkpoint; source fixes belong to the next authorized stage.
+Stage 4 uses whitebox-testing from that main merge, with a separate PR. Existing defect Issues #1, #3, #4, #5 and #6 remain open; the new WB-002 failure belongs to #5. The user authorized Stage 5. Pause at its fixes-PR review checkpoint before merging or starting Stage 6.
