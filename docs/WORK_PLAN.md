@@ -2,7 +2,7 @@
 
 ## Current status
 
-Stages 1–4 are complete; PR #8 merged at e72449f60343dc75f64f5fddc83a4f21fe1d6b2d after Codex-assisted technical review 5878893248, explicitly authorized by the user. Stage 5 on defect-fixes implements five source corrections, with all 78 unchanged tests passing locally (54/54 statements, 26/26 branches). Original-source evidence is preserved. See DEFECT_FIXES.md for review, CI and regression status. Stage 6 has not started.
+Stages 1–5 are complete. PR #9 merged at 1a9e7f4c3f528e5818171c69546be353f0987284 after disclosed Codex-assisted review 5879011434. Stage 6 provides docs/testing_report.pdf and SUBMISSION_CHECKLIST.md with preserved design, original and corrected evidence, links and actual contributions. All 78 unchanged tests pass; 54/54 statements and 26/26 branches covered. Personal review/viva readiness, instructor access and portal submission are not claimed complete.
 
 We stop after each part so the student can ask questions before requesting the next part. These are working stages; the assignment's assessed Parts A-D are tracked separately below.
 
@@ -17,9 +17,9 @@ We stop after each part so the student can ask questions before requesting the n
 
 ## Responsibility split
 
-The primary student (GitHub: muhammadaaribali), with assistant help, owns the principal test design, registration tests, white-box analysis, defect investigation/fixes, automation, spreadsheets, diagram, and report. Student name and roll number are not yet provided.
+The primary student (GitHub: muhammadaaribali), with assistant help, owns the principal test design, registration tests, white-box analysis, defect investigation/fixes, automation, spreadsheets, diagram, and report. Primary identity: Muhammad Aarib Ali, 24P-3036.
 
-The collaborator's assigned scope is the withdrawal tests FR-13/FR-14. At the primary student's explicit request, Codex implemented and ran these and submitted them through shafaynaeem's browser, with assistance disclosed in PR #2. This is not independent human implementation or review. Both students' full names and roll numbers remain to be supplied.
+The collaborator's assigned scope is the withdrawal tests FR-13/FR-14. At the primary student's explicit request, Codex implemented and ran these and submitted them through shafaynaeem's browser, with assistance disclosed in PR #2. This is not independent human implementation or review. Collaborator identity supplied by the user: Shafay Naeem, 3089.
 
 Both members must review another member's PR and address feedback. A proposed division is not evidence of completed contributions. Record actual PRs, commits, reviews, and feedback responses when they exist; do not invent them. Both members prepare to explain their own work in the viva.
 
@@ -58,4 +58,4 @@ No collaborator action is needed during Stage 1. The assistant does not send mes
 
 Repository: https://github.com/muhammadaaribali/SQE-Assignment-2. PR #2 merged into blackbox-testing at 8e1f65831ebfbe11a9edf435b4af6504d23e64fe, then PR #7 merged into main at 6b29e0cb8d89f4cc47b80c2b5f611d11db4534da, as explicitly requested. Primary review on #2: 5857526324. Shafay-account assisted review/comment on #7: 5859018400; assisted approval: 5859050351. Actual AI involvement is disclosed; do not describe these as independent human executions.
 
-Stage 4 uses whitebox-testing from that main merge, with a separate PR. Existing defect Issues #1, #3, #4, #5 and #6 remain open; the new WB-002 failure belongs to #5. The user authorized Stage 5. Pause at its fixes-PR review checkpoint before merging or starting Stage 6.
+Stage 4 uses whitebox-testing from that main merge, with a separate PR. Existing defect Issues #1, #3, #4, #5 and #6 remain open; the new WB-002 failure belongs to #5. The user authorized the next stage. PR #9 is merged and Stage 6 deliverables are prepared.
