@@ -4,11 +4,11 @@ SE3002 Software Quality Engineering. The supplied Python registration module is 
 
 ## Progress
 
-Stages 1–4 are complete. PR #8 preserves the original-source white-box analysis and was merged after a disclosed Codex-assisted technical review at the user's request.
+Stages 1–5 are complete. The original-source analysis is preserved in PR #8; the five fixes were merged through PR #9. All **78 unchanged tests pass**, with **54/54 statements and 26/26 branches covered**. Original failing runs remain available.
 
-Stage 5 on `defect-fixes` corrects five confirmed defects. The same **78 tests now all pass locally**, with **54/54 statements and 26/26 branches covered (100%)**. Tests and expected results are unchanged. See [fixes and regression comparison](docs/DEFECT_FIXES.md). GitHub verification and the fixes PR review are tracked there. The fixes are not yet merged; final reporting remains pending.
+Stage 6 deliverables: [final testing report](docs/testing_report.pdf), [submission checklist](docs/SUBMISSION_CHECKLIST.md), design workbooks, original CFG and evidence. The report includes all requested analysis and discloses the actual assistance and contribution record. Course-portal submission and each member's viva preparation remain personal steps.
 
-The [white-box analysis](docs/WHITEBOX_ANALYSIS.md) and [CFG](docs/cfg.png) describe the preserved **original** source: 48 passed, 30 failed. Keep those results separate from the corrected-source results.
+The [white-box analysis](docs/WHITEBOX_ANALYSIS.md) and [CFG](docs/cfg.png) describe the original source (48 passes, 30 failures). [Corrected-source regression results](docs/DEFECT_FIXES.md) describe the five fixes and 78 passing tests.
 
 Repository: https://github.com/muhammadaaribali/SQE-Assignment-2
 
@@ -48,9 +48,9 @@ Original failing runs and corrected passing runs are recorded separately in docs
 
 ## Collaboration and remaining work
 
-Primary student: `muhammadaaribali`; collaborator: `shafaynaeem`. Codex prepared the implementation, tests and analysis at the primary student's request. Withdrawal tests were submitted through Shafay's signed-in account with disclosure. The primary student walked through both withdrawal cases and requested approval submission; the primary student later confirmed Shafay's understanding and requested his assisted approval on PR #7. Both review submissions disclose the assistance and do not claim independent execution by Shafay.
+Primary student: Muhammad Aarib Ali (24P-3036), `muhammadaaribali`; collaborator: Shafay Naeem (3089), `shafaynaeem`. Codex prepared the implementation, tests and analysis at the primary student's request. Withdrawal tests were submitted through Shafay's signed-in account with disclosure. The primary student walked through both withdrawal cases and requested approval submission; the primary student later confirmed Shafay's understanding and requested his assisted approval on PR #7. Both review submissions disclose the assistance and do not claim independent execution by Shafay.
 
-Next: discuss and review the Stage 5 fixes PR before merging. Final reporting and viva preparation follow later.
+Next: inspect the final report and names/roll numbers, ensure the instructor can access the repository, submit the required files/link through the course portal, and prepare for the viva.
 
 ## Evidence rules
 

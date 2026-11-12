@@ -1,6 +1,6 @@
 # Requirements checklist
 
-Source: the supplied REQUIREMENTS.md and matching Student_Registration_SRS.docx. This is a requirements checklist, not execution evidence. Stage 2 design is now recorded in blackbox_test_design.xlsx, decision_table.xlsx and blackbox_cases.json. Stable BB test IDs map all requirements to planned executions; implementation and results remain pending Stage 3.
+Source: the supplied REQUIREMENTS.md and matching Student_Registration_SRS.docx. This is a requirements checklist, not execution evidence. Stage 2 design is now recorded in blackbox_test_design.xlsx, decision_table.xlsx and blackbox_cases.json. Stable BB test IDs map all requirements to the executed suites. The original design mapping below is retained; actual execution evidence is in docs/evidence and all 78 corrected-source tests pass.
 
 | Requirement | Required behavior to verify | Planned checks | Owner |
 |---|---|---|---|
@@ -16,8 +16,8 @@ Source: the supplied REQUIREMENTS.md and matching Student_Registration_SRS.docx.
 | FR-10 | registration_decision never mutates student or course | Compare complete independent before/after snapshots across outcomes and applicable validation errors | Primary |
 | FR-11 | Successful registration adds course, adds its credits, increments enrollment | Exact state differences; unrelated fields unchanged | Primary |
 | FR-12 | Waitlisting adds ID only if absent; no other state changes; rejected registration changes nothing | First and repeat waitlisting; complete snapshots for blocked outcomes | Primary |
-| FR-13 | Registered withdrawal returns True, removes course, subtracts credits, decreases enrollment by one | Coherent starting state; exact changes and unrelated-field preservation | Collaborator (reserved) |
-| FR-14 | Nonregistered withdrawal returns False and changes neither object | Coherent nonregistered state; full snapshots; repeat withdrawal if appropriate | Collaborator (reserved) |
+| FR-13 | Registered withdrawal returns True, removes course, subtracts credits, decreases enrollment by one | Coherent starting state; exact changes and unrelated-field preservation | Collaborator scope (Codex-assisted) |
+| FR-14 | Nonregistered withdrawal returns False and changes neither object | Coherent nonregistered state; full snapshots; repeat withdrawal if appropriate | Collaborator scope (Codex-assisted) |
 | FR-15 | Negative dues raise Invalid dues; capacity < 1 or enrollment outside 0-capacity raises Invalid capacity or enrollment; dues validated first | Negative/zero dues; capacity zero/one; enrollment -1/0/capacity/capacity+1; simultaneous invalid dues and capacity | Primary |
 
 ## Validation scope
