@@ -1,0 +1,99 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.10, pytest-9.2.0, pluggy-1.7.0 -- /opt/hostedtoolcache/Python/3.14.10/x64/bin/python
+cachedir: .pytest_cache
+rootdir: /home/runner/work/SQE-Assignment-2/SQE-Assignment-2
+plugins: cov-7.1.0
+collecting ... collected 78 items
+
+tests/test_blackbox.py::test_designed_blackbox[BB-001] PASSED            [  1%]
+tests/test_blackbox.py::test_designed_blackbox[BB-002] PASSED            [  2%]
+tests/test_blackbox.py::test_designed_blackbox[BB-003] PASSED            [  3%]
+tests/test_blackbox.py::test_designed_blackbox[BB-004] PASSED            [  5%]
+tests/test_blackbox.py::test_designed_blackbox[BB-005] PASSED            [  6%]
+tests/test_blackbox.py::test_designed_blackbox[BB-006] PASSED            [  7%]
+tests/test_blackbox.py::test_designed_blackbox[BB-007] PASSED            [  8%]
+tests/test_blackbox.py::test_designed_blackbox[BB-008] PASSED            [ 10%]
+tests/test_blackbox.py::test_designed_blackbox[BB-009] PASSED            [ 11%]
+tests/test_blackbox.py::test_designed_blackbox[BB-010] PASSED            [ 12%]
+tests/test_blackbox.py::test_designed_blackbox[BB-011] PASSED            [ 14%]
+tests/test_blackbox.py::test_designed_blackbox[BB-012] PASSED            [ 15%]
+tests/test_blackbox.py::test_designed_blackbox[BB-013] PASSED            [ 16%]
+tests/test_blackbox.py::test_designed_blackbox[BB-014] PASSED            [ 17%]
+tests/test_blackbox.py::test_designed_blackbox[BB-015] PASSED            [ 19%]
+tests/test_blackbox.py::test_designed_blackbox[BB-016] PASSED            [ 20%]
+tests/test_blackbox.py::test_designed_blackbox[BB-017] PASSED            [ 21%]
+tests/test_blackbox.py::test_designed_blackbox[BB-018] PASSED            [ 23%]
+tests/test_blackbox.py::test_designed_blackbox[BB-019] PASSED            [ 24%]
+tests/test_blackbox.py::test_designed_blackbox[BB-020] PASSED            [ 25%]
+tests/test_blackbox.py::test_designed_blackbox[BB-021] PASSED            [ 26%]
+tests/test_blackbox.py::test_designed_blackbox[BB-022] PASSED            [ 28%]
+tests/test_blackbox.py::test_designed_blackbox[BB-023] PASSED            [ 29%]
+tests/test_blackbox.py::test_designed_blackbox[BB-024] PASSED            [ 30%]
+tests/test_blackbox.py::test_designed_blackbox[BB-025] PASSED            [ 32%]
+tests/test_blackbox.py::test_designed_blackbox[BB-026] PASSED            [ 33%]
+tests/test_blackbox.py::test_designed_blackbox[BB-027] PASSED            [ 34%]
+tests/test_blackbox.py::test_designed_blackbox[BB-028] PASSED            [ 35%]
+tests/test_blackbox.py::test_designed_blackbox[BB-029] PASSED            [ 37%]
+tests/test_blackbox.py::test_designed_blackbox[BB-030] PASSED            [ 38%]
+tests/test_blackbox.py::test_designed_blackbox[BB-031] PASSED            [ 39%]
+tests/test_blackbox.py::test_designed_blackbox[BB-032] PASSED            [ 41%]
+tests/test_blackbox.py::test_designed_blackbox[BB-033] PASSED            [ 42%]
+tests/test_blackbox.py::test_designed_blackbox[BB-034] PASSED            [ 43%]
+tests/test_blackbox.py::test_designed_blackbox[BB-035] PASSED            [ 44%]
+tests/test_blackbox.py::test_designed_blackbox[BB-036] PASSED            [ 46%]
+tests/test_blackbox.py::test_designed_blackbox[BB-037] PASSED            [ 47%]
+tests/test_blackbox.py::test_designed_blackbox[BB-038] PASSED            [ 48%]
+tests/test_blackbox.py::test_designed_blackbox[BB-039] PASSED            [ 50%]
+tests/test_blackbox.py::test_designed_blackbox[BB-040] PASSED            [ 51%]
+tests/test_blackbox.py::test_designed_blackbox[BB-041] PASSED            [ 52%]
+tests/test_blackbox.py::test_designed_blackbox[BB-042] PASSED            [ 53%]
+tests/test_blackbox.py::test_designed_blackbox[BB-043] PASSED            [ 55%]
+tests/test_blackbox.py::test_designed_blackbox[BB-044] PASSED            [ 56%]
+tests/test_blackbox.py::test_designed_blackbox[BB-045] PASSED            [ 57%]
+tests/test_blackbox.py::test_designed_blackbox[BB-046] PASSED            [ 58%]
+tests/test_blackbox.py::test_designed_blackbox[BB-047] PASSED            [ 60%]
+tests/test_blackbox.py::test_designed_blackbox[BB-048] PASSED            [ 61%]
+tests/test_blackbox.py::test_designed_blackbox[BB-049] PASSED            [ 62%]
+tests/test_blackbox.py::test_designed_blackbox[BB-050] PASSED            [ 64%]
+tests/test_blackbox.py::test_designed_blackbox[BB-051] PASSED            [ 65%]
+tests/test_blackbox.py::test_designed_blackbox[BB-052] PASSED            [ 66%]
+tests/test_blackbox.py::test_designed_blackbox[BB-053] PASSED            [ 67%]
+tests/test_blackbox.py::test_designed_blackbox[BB-054] PASSED            [ 69%]
+tests/test_blackbox.py::test_designed_blackbox[BB-055] PASSED            [ 70%]
+tests/test_blackbox.py::test_designed_blackbox[BB-056] PASSED            [ 71%]
+tests/test_blackbox.py::test_designed_blackbox[BB-057] PASSED            [ 73%]
+tests/test_blackbox.py::test_designed_blackbox[BB-058] PASSED            [ 74%]
+tests/test_blackbox.py::test_designed_blackbox[BB-059] PASSED            [ 75%]
+tests/test_blackbox.py::test_designed_blackbox[BB-060] PASSED            [ 76%]
+tests/test_blackbox.py::test_designed_blackbox[BB-061] PASSED            [ 78%]
+tests/test_blackbox.py::test_designed_blackbox[BB-062] PASSED            [ 79%]
+tests/test_blackbox.py::test_designed_blackbox[BB-063] PASSED            [ 80%]
+tests/test_blackbox.py::test_designed_blackbox[BB-064] PASSED            [ 82%]
+tests/test_blackbox.py::test_designed_blackbox[BB-065] PASSED            [ 83%]
+tests/test_blackbox.py::test_designed_blackbox[BB-066] PASSED            [ 84%]
+tests/test_blackbox.py::test_designed_blackbox[BB-067] PASSED            [ 85%]
+tests/test_blackbox.py::test_designed_blackbox[BB-068] PASSED            [ 87%]
+tests/test_blackbox.py::test_designed_blackbox[BB-069] PASSED            [ 88%]
+tests/test_blackbox.py::test_designed_blackbox[BB-070] PASSED            [ 89%]
+tests/test_blackbox.py::test_designed_blackbox[BB-071] PASSED            [ 91%]
+tests/test_blackbox.py::test_bb_072_withdraw_registered_student PASSED   [ 92%]
+tests/test_blackbox.py::test_bb_073_withdraw_unregistered_student PASSED [ 93%]
+tests/test_whitebox.py::test_dues_implementation_boundary[WB-001] PASSED [ 94%]
+tests/test_whitebox.py::test_dues_implementation_boundary[WB-002] PASSED [ 96%]
+tests/test_whitebox.py::test_wb_003_no_prerequisite_overlap PASSED       [ 97%]
+tests/test_whitebox.py::test_credit_helper_error_propagation[WB-004] PASSED [ 98%]
+tests/test_whitebox.py::test_credit_helper_error_propagation[WB-005] PASSED [100%]
+
+- generated xml file: /home/runner/work/SQE-Assignment-2/SQE-Assignment-2/artifacts/junit.xml -
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.14.10-final-0 _______________
+
+Name              Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------
+registration.py      54      0     26      0   100%
+-------------------------------------------------------------
+TOTAL                54      0     26      0   100%
+Coverage HTML written to dir artifacts/htmlcov
+Coverage XML written to file artifacts/coverage.xml
+Coverage JSON written to file artifacts/coverage.json
+============================== 78 passed in 0.15s ==============================

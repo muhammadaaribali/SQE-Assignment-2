@@ -1,0 +1,17 @@
+{
+  "run_url": "https://github.com/muhammadaaribali/SQE-Assignment-2/actions/runs/43268281508",
+  "run_id": 43268281508,
+  "job_id": 131357653752,
+  "head_commit": "83037ee3233f6878556ec984ced54ab599b797af",
+  "tested_merge_commit": "8f103e1c5139cb1baaab5447f11888c857300b59",
+  "tests": 78,
+  "passed": 78,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "statements": "54/54",
+  "branches": "26/26",
+  "note": "Verified downloaded artifact against local metrics. Later documentation/evidence commit leaves tested source and tests unchanged.",
+  "conclusion": "success",
+  "artifact_upload": "success"
+}

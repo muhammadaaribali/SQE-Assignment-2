@@ -4,9 +4,11 @@ SE3002 Software Quality Engineering. The supplied Python registration module is 
 
 ## Progress
 
-Stages 1–3 are complete, including the merges of withdrawal PR #2 and primary black-box PR #7. Their approvals were submitted with Codex assistance disclosed.
+Stages 1–4 are complete. PR #8 preserves the original-source white-box analysis and was merged after a disclosed Codex-assisted technical review at the user's request.
 
-Stage 4 adds five structural tests and a control-flow graph with explicit short-circuit analysis. The original source is unchanged: **78 tests, 48 passed, 30 failed**, **96.23% statement coverage**, **92.31% branch coverage**. The five existing application defects remain unfixed. See [white-box analysis](docs/WHITEBOX_ANALYSIS.md), [CFG](docs/cfg.png), and [original black-box evidence](docs/BLACKBOX_EXECUTION.md). This branch is awaiting review; Stage 5 fixes and the final report are not yet complete.
+Stage 5 on `defect-fixes` corrects five confirmed defects. The same **78 tests now all pass locally**, with **54/54 statements and 26/26 branches covered (100%)**. Tests and expected results are unchanged. See [fixes and regression comparison](docs/DEFECT_FIXES.md). GitHub verification and the fixes PR review are tracked there. The fixes are not yet merged; final reporting remains pending.
+
+The [white-box analysis](docs/WHITEBOX_ANALYSIS.md) and [CFG](docs/cfg.png) describe the preserved **original** source: 48 passed, 30 failed. Keep those results separate from the corrected-source results.
 
 Repository: https://github.com/muhammadaaribali/SQE-Assignment-2
 
@@ -42,13 +44,13 @@ Run both implemented suites:
 python -m pytest tests/ --cov=registration --cov-branch --cov-report=term-missing
 ```
 
-Both original-source runs are recorded separately in docs/evidence. Correct requirements-based tests currently fail; preserve those failures before fixing the implementation.
+Original failing runs and corrected passing runs are recorded separately in docs/evidence. The frozen design JSON retains its original planning status; execution evidence records actual results.
 
 ## Collaboration and remaining work
 
 Primary student: `muhammadaaribali`; collaborator: `shafaynaeem`. Codex prepared the implementation, tests and analysis at the primary student's request. Withdrawal tests were submitted through Shafay's signed-in account with disclosure. The primary student walked through both withdrawal cases and requested approval submission; the primary student later confirmed Shafay's understanding and requested his assisted approval on PR #7. Both review submissions disclose the assistance and do not claim independent execution by Shafay.
 
-Next: discuss and review the Stage 4 contribution, then proceed to Stage 5 fixes only after the user's go-ahead. Final reporting and viva preparation follow later.
+Next: discuss and review the Stage 5 fixes PR before merging. Final reporting and viva preparation follow later.
 
 ## Evidence rules
 
