@@ -4,7 +4,9 @@ SE3002 Software Quality Engineering. The supplied Python registration module is 
 
 ## Progress
 
-Stages 1 and 2 are complete. Stage 3 implementation, execution and publication are complete; peer reviews and merges remain pending. All 73 black-box tests ran locally and on GitHub: **44 passed, 29 failed**, with 92.45% statement coverage and 84.62% branch coverage. Five distinct defects are recorded in Issues #1, #3, #4, #5 and #6. The original program remains unchanged. [Primary testing PR #7](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/7) is open for Shafay's review; [withdrawal PR #2](https://github.com/muhammadaaribali/SQE-Assignment-2/pull/2) is open for the primary student's review. Neither review is claimed complete. Both PRs remain unmerged. See [execution evidence](docs/BLACKBOX_EXECUTION.md).
+Stages 1–3 are complete, including the merges of withdrawal PR #2 and primary black-box PR #7. Their approvals were submitted with Codex assistance disclosed.
+
+Stage 4 adds five structural tests and a control-flow graph with explicit short-circuit analysis. The original source is unchanged: **78 tests, 48 passed, 30 failed**, **96.23% statement coverage**, **92.31% branch coverage**. The five existing application defects remain unfixed. See [white-box analysis](docs/WHITEBOX_ANALYSIS.md), [CFG](docs/cfg.png), and [original black-box evidence](docs/BLACKBOX_EXECUTION.md). This branch is awaiting review; Stage 5 fixes and the final report are not yet complete.
 
 Repository: https://github.com/muhammadaaribali/SQE-Assignment-2
 
@@ -34,19 +36,19 @@ python -m pytest tests/test_blackbox.py -v
 python -m pytest tests/test_blackbox.py --cov=registration --cov-branch --cov-report=term-missing
 ```
 
-After Stage 4 adds white-box tests:
+Run both implemented suites:
 
 ```bash
 python -m pytest tests/ --cov=registration --cov-branch --cov-report=term-missing
 ```
 
-The black-box run is recorded in docs/evidence; the white-box command remains for Stage 4. Correct requirements-based tests currently fail; preserve those failures before fixing the implementation.
+Both original-source runs are recorded separately in docs/evidence. Correct requirements-based tests currently fail; preserve those failures before fixing the implementation.
 
 ## Collaboration and remaining work
 
-Primary student: `muhammadaaribali`; collaborator: `shafaynaeem`, whose invitation has been accepted. At the primary student's request, Codex implemented and ran the two withdrawal tests and submitted them through shafaynaeem's signed-in browser. This is AI-assisted work, not evidence of Shafay independently writing or reviewing the tests. Both members' human review and understanding remain to be demonstrated. The primary account records the local evidence and defect report.
+Primary student: `muhammadaaribali`; collaborator: `shafaynaeem`. Codex prepared the implementation, tests and analysis at the primary student's request. Withdrawal tests were submitted through Shafay's signed-in account with disclosure. The primary student walked through both withdrawal cases and requested approval submission; the primary student later confirmed Shafay's understanding and requested his assisted approval on PR #7. Both review submissions disclose the assistance and do not claim independent execution by Shafay.
 
-Next: complete and discuss the genuine peer reviews; proceed to Stage 4 white-box analysis only after the user's go-ahead. Fixes, the final report and viva preparation follow later.
+Next: discuss and review the Stage 4 contribution, then proceed to Stage 5 fixes only after the user's go-ahead. Final reporting and viva preparation follow later.
 
 ## Evidence rules
 

@@ -1,0 +1,207 @@
+{
+  "note": "Separate analysis audit, not an additional pytest suite or a coverage measurement. Line trace verifies path representatives. Atomic tables are derived from pure comparisons and short-circuit rules, not directly instrumented condition coverage.",
+  "source_sha256": "d6c35d6804dd3bcaed3cc164ab2f163ad8214792bdc410e258ec54cdd1099100",
+  "graph": {
+    "node_count": 19,
+    "edge_count": 27,
+    "cyclomatic_complexity": 10,
+    "decisions": 9,
+    "basis_path_edge_rank": 10
+  },
+  "feasible_path_checks": [
+    {
+      "path": "P1",
+      "test_id": "BB-013",
+      "observed_function_lines": [
+        46,
+        47
+      ],
+      "actual": {
+        "exception": "ValueError",
+        "message": "Invalid dues"
+      },
+      "state_unchanged": true
+    },
+    {
+      "path": "P2",
+      "test_id": "BB-020",
+      "observed_function_lines": [
+        46,
+        48,
+        49
+      ],
+      "actual": {
+        "exception": "ValueError",
+        "message": "Invalid capacity or enrollment"
+      },
+      "state_unchanged": true
+    },
+    {
+      "path": "P3",
+      "test_id": "BB-019",
+      "observed_function_lines": [
+        46,
+        48,
+        49
+      ],
+      "actual": {
+        "exception": "ValueError",
+        "message": "Invalid capacity or enrollment"
+      },
+      "state_unchanged": true
+    },
+    {
+      "path": "P4",
+      "test_id": "BB-018",
+      "observed_function_lines": [
+        46,
+        48,
+        49
+      ],
+      "actual": {
+        "exception": "ValueError",
+        "message": "Invalid capacity or enrollment"
+      },
+      "state_unchanged": true
+    },
+    {
+      "path": "P5",
+      "test_id": "WB-001",
+      "observed_function_lines": [
+        46,
+        48,
+        50,
+        51
+      ],
+      "actual": {
+        "return": "DUES_BLOCK"
+      },
+      "state_unchanged": true
+    },
+    {
+      "path": "P6",
+      "test_id": "BB-015",
+      "observed_function_lines": [
+        46,
+        48,
+        50,
+        52,
+        53
+      ],
+      "actual": {
+        "return": "ALREADY_REGISTERED"
+      },
+      "state_unchanged": true
+    },
+    {
+      "path": "P7",
+      "test_id": "WB-003",
+      "observed_function_lines": [
+        46,
+        48,
+        50,
+        52,
+        54,
+        55
+      ],
+      "actual": {
+        "return": "PREREQUISITES_MISSING"
+      },
+      "state_unchanged": true
+    },
+    {
+      "path": "P8",
+      "test_id": "BB-017",
+      "observed_function_lines": [
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        57
+      ],
+      "actual": {
+        "return": "CREDIT_LIMIT"
+      },
+      "state_unchanged": true
+    },
+    {
+      "path": "P10",
+      "test_id": "BB-011",
+      "observed_function_lines": [
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60
+      ],
+      "actual": {
+        "return": "REGISTERED"
+      },
+      "state_unchanged": true
+    }
+  ],
+  "mcdc_vectors": [
+    {
+      "test_id": "BB-032",
+      "logical": [
+        true,
+        true,
+        false
+      ],
+      "evaluated": [
+        true,
+        true,
+        false
+      ],
+      "decision": false
+    },
+    {
+      "test_id": "BB-020",
+      "logical": [
+        false,
+        true,
+        false
+      ],
+      "evaluated": [
+        false,
+        "NE",
+        "NE"
+      ],
+      "decision": true
+    },
+    {
+      "test_id": "BB-019",
+      "logical": [
+        true,
+        false,
+        false
+      ],
+      "evaluated": [
+        true,
+        false,
+        "NE"
+      ],
+      "decision": true
+    },
+    {
+      "test_id": "BB-018",
+      "logical": [
+        true,
+        true,
+        true
+      ],
+      "evaluated": [
+        true,
+        true,
+        true
+      ],
+      "decision": true
+    }
+  ],
+  "mcdc_pair_checks": "3 of 3 passed; all non-target logical values fixed; evaluated NE recorded honestly"
+}

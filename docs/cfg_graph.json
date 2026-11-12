@@ -1,0 +1,313 @@
+{
+  "function": "registration_decision",
+  "convention": "Expanded intraprocedural, normal-return helper calls; single synthetic exit; short-circuit atoms A/B/C explicit",
+  "nodes": [
+    "E",
+    "D1",
+    "A",
+    "B",
+    "C",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "X1",
+    "X2",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "Z"
+  ],
+  "edges": [
+    {
+      "from": "E",
+      "to": "D1",
+      "label": ""
+    },
+    {
+      "from": "D1",
+      "to": "X1",
+      "label": "T"
+    },
+    {
+      "from": "D1",
+      "to": "A",
+      "label": "F"
+    },
+    {
+      "from": "A",
+      "to": "X2",
+      "label": "F"
+    },
+    {
+      "from": "A",
+      "to": "B",
+      "label": "T"
+    },
+    {
+      "from": "B",
+      "to": "X2",
+      "label": "F"
+    },
+    {
+      "from": "B",
+      "to": "C",
+      "label": "T"
+    },
+    {
+      "from": "C",
+      "to": "X2",
+      "label": "T"
+    },
+    {
+      "from": "C",
+      "to": "D3",
+      "label": "F"
+    },
+    {
+      "from": "D3",
+      "to": "R1",
+      "label": "T"
+    },
+    {
+      "from": "D3",
+      "to": "D4",
+      "label": "F"
+    },
+    {
+      "from": "D4",
+      "to": "R2",
+      "label": "T"
+    },
+    {
+      "from": "D4",
+      "to": "D5",
+      "label": "F"
+    },
+    {
+      "from": "D5",
+      "to": "R3",
+      "label": "T"
+    },
+    {
+      "from": "D5",
+      "to": "D6",
+      "label": "F"
+    },
+    {
+      "from": "D6",
+      "to": "R4",
+      "label": "T"
+    },
+    {
+      "from": "D6",
+      "to": "D7",
+      "label": "F"
+    },
+    {
+      "from": "D7",
+      "to": "R5",
+      "label": "T"
+    },
+    {
+      "from": "D7",
+      "to": "R6",
+      "label": "F"
+    },
+    {
+      "from": "X1",
+      "to": "Z",
+      "label": ""
+    },
+    {
+      "from": "X2",
+      "to": "Z",
+      "label": ""
+    },
+    {
+      "from": "R1",
+      "to": "Z",
+      "label": ""
+    },
+    {
+      "from": "R2",
+      "to": "Z",
+      "label": ""
+    },
+    {
+      "from": "R3",
+      "to": "Z",
+      "label": ""
+    },
+    {
+      "from": "R4",
+      "to": "Z",
+      "label": ""
+    },
+    {
+      "from": "R5",
+      "to": "Z",
+      "label": ""
+    },
+    {
+      "from": "R6",
+      "to": "Z",
+      "label": ""
+    }
+  ],
+  "node_count": 19,
+  "edge_count": 27,
+  "cyclomatic_complexity": 10,
+  "decisions": 9,
+  "basis_path_edge_rank": 10,
+  "paths": [
+    {
+      "id": "P1",
+      "nodes": [
+        "E",
+        "D1",
+        "X1",
+        "Z"
+      ],
+      "feasible": true
+    },
+    {
+      "id": "P2",
+      "nodes": [
+        "E",
+        "D1",
+        "A",
+        "X2",
+        "Z"
+      ],
+      "feasible": true
+    },
+    {
+      "id": "P3",
+      "nodes": [
+        "E",
+        "D1",
+        "A",
+        "B",
+        "X2",
+        "Z"
+      ],
+      "feasible": true
+    },
+    {
+      "id": "P4",
+      "nodes": [
+        "E",
+        "D1",
+        "A",
+        "B",
+        "C",
+        "X2",
+        "Z"
+      ],
+      "feasible": true
+    },
+    {
+      "id": "P5",
+      "nodes": [
+        "E",
+        "D1",
+        "A",
+        "B",
+        "C",
+        "D3",
+        "R1",
+        "Z"
+      ],
+      "feasible": true
+    },
+    {
+      "id": "P6",
+      "nodes": [
+        "E",
+        "D1",
+        "A",
+        "B",
+        "C",
+        "D3",
+        "D4",
+        "R2",
+        "Z"
+      ],
+      "feasible": true
+    },
+    {
+      "id": "P7",
+      "nodes": [
+        "E",
+        "D1",
+        "A",
+        "B",
+        "C",
+        "D3",
+        "D4",
+        "D5",
+        "R3",
+        "Z"
+      ],
+      "feasible": true
+    },
+    {
+      "id": "P8",
+      "nodes": [
+        "E",
+        "D1",
+        "A",
+        "B",
+        "C",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "R4",
+        "Z"
+      ],
+      "feasible": true
+    },
+    {
+      "id": "P9",
+      "nodes": [
+        "E",
+        "D1",
+        "A",
+        "B",
+        "C",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "R5",
+        "Z"
+      ],
+      "feasible": false
+    },
+    {
+      "id": "P10",
+      "nodes": [
+        "E",
+        "D1",
+        "A",
+        "B",
+        "C",
+        "D3",
+        "D4",
+        "D5",
+        "D6",
+        "D7",
+        "R6",
+        "Z"
+      ],
+      "feasible": true
+    }
+  ]
+}
